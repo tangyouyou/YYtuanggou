@@ -1,0 +1,695 @@
+[ 2015-07-10T15:45:13+08:00 ] 117.29.109.46 /YYtuangou/index.php
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000376s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000452s ]
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: [8] Undefined index: uid /alidata/www/default/YYtuangou/APP/Modules/Index/Action/CommonAction.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `yy_category` [ RunTime:0.000616s ]
+SQL: SELECT `cname`,`cid` FROM `yy_category` WHERE ( `pid` = 0 ) AND ( `display` = 1 ) ORDER BY sort asc LIMIT 4   [ RunTime:0.000232s ]
+SQL: SHOW COLUMNS FROM `yy_area` [ RunTime:0.000389s ]
+SQL: SELECT `aname`,`aid` FROM `yy_area` WHERE ( `pid` = 0 ) AND ( `display` = 1 ) ORDER BY sort asc  [ RunTime:0.000175s ]
+SQL: SELECT `cname`,`cid` FROM `yy_category` WHERE ( `pid` = 0 ) AND ( `display` = 1 ) ORDER BY sort asc LIMIT 7   [ RunTime:0.000175s ]
+SQL: SHOW COLUMNS FROM `yy_goods` [ RunTime:0.000527s ]
+SQL: SHOW COLUMNS FROM `yy_category` [ RunTime:0.000415s ]
+SQL: SHOW COLUMNS FROM `yy_area` [ RunTime:0.000388s ]
+SQL: SHOW COLUMNS FROM `yy_shops` [ RunTime:0.000384s ]
+SQL: SELECT goods.main_title AS main_title,goods.goods_img AS goods_img,goods.price AS price,goods.old_price AS old_price,goods.buy AS buy,goods.gid AS gid FROM yy_goods goods INNER JOIN yy_category category ON goods.cid = category.cid INNER JOIN yy_area area ON goods.aid = area.aid INNER JOIN yy_shops shops ON goods.sid = shops.sid ORDER BY goods.buy desc LIMIT 5   [ RunTime:0.000525s ]
+SQL: SELECT goods.cid AS cid,category.cid AS cid,category.cname AS cname FROM yy_goods goods INNER JOIN yy_category category ON goods.cid = category.cid INNER JOIN yy_area area ON goods.aid = area.aid INNER JOIN yy_shops shops ON goods.sid = shops.sid GROUP BY goods.cid ORDER BY goods.buy desc LIMIT 7   [ RunTime:0.000404s ]
+SQL: SELECT COUNT(*) AS tp_count FROM yy_goods goods INNER JOIN yy_category category ON goods.cid = category.cid INNER JOIN yy_area area ON goods.aid = area.aid INNER JOIN yy_shops shops ON goods.sid = shops.sid WHERE ( goods.price > '' ) LIMIT 1   [ RunTime:0.000384s ]
+SQL: SELECT goods.gid AS gid,goods.cid AS cid,goods.sid AS sid,goods.aid AS aid,goods.price AS price,goods.old_price AS old_price,goods.main_title AS main_title,goods.sub_title AS sub_title,goods.buy AS buy,goods.goods_img AS goods_img,category.cid AS cid,area.aid AS aid,shops.sid AS sid FROM yy_goods goods INNER JOIN yy_category category ON goods.cid = category.cid INNER JOIN yy_area area ON goods.aid = area.aid INNER JOIN yy_shops shops ON goods.sid = shops.sid WHERE ( goods.price > '' ) LIMIT 0,10   [ RunTime:0.000318s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 32 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 33 行.
+NOTIC: [8] Use of undefined constant Member - assumed 'Member' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 90 行.
+NOTIC: [8] Use of undefined constant Member - assumed 'Member' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 93 行.
+NOTIC: [8] Use of undefined constant Member - assumed 'Member' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 104 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 104 行.
+NOTIC: [8] Use of undefined constant Member - assumed 'Member' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 104 行.
+NOTIC: [8] Use of undefined constant Member - assumed 'Member' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 105 行.
+NOTIC: [8] Use of undefined constant sonCategory - assumed 'sonCategory' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 133 行.
+NOTIC: [8] Undefined variable: sonCategory /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 135 行.
+NOTIC: [8] Use of undefined constant sonArea - assumed 'sonArea' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 146 行.
+NOTIC: [8] Undefined variable: sonArea /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 147 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.016659s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016724s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000317s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000267s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000155s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000297s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001171s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000444s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000491s ]
+
+[ 2015-07-10T17:05:41+08:00 ] 120.36.98.30 /YYtuangou/index.php
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000370s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000442s ]
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: [8] Undefined index: uid /alidata/www/default/YYtuangou/APP/Modules/Index/Action/CommonAction.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `yy_category` [ RunTime:0.000670s ]
+SQL: SELECT `cname`,`cid` FROM `yy_category` WHERE ( `pid` = 0 ) AND ( `display` = 1 ) ORDER BY sort asc LIMIT 4   [ RunTime:0.000222s ]
+SQL: SHOW COLUMNS FROM `yy_area` [ RunTime:0.000432s ]
+SQL: SELECT `aname`,`aid` FROM `yy_area` WHERE ( `pid` = 0 ) AND ( `display` = 1 ) ORDER BY sort asc  [ RunTime:0.000167s ]
+SQL: SELECT `cname`,`cid` FROM `yy_category` WHERE ( `pid` = 0 ) AND ( `display` = 1 ) ORDER BY sort asc LIMIT 7   [ RunTime:0.000192s ]
+SQL: SHOW COLUMNS FROM `yy_goods` [ RunTime:0.000496s ]
+SQL: SHOW COLUMNS FROM `yy_category` [ RunTime:0.000420s ]
+SQL: SHOW COLUMNS FROM `yy_area` [ RunTime:0.000390s ]
+SQL: SHOW COLUMNS FROM `yy_shops` [ RunTime:0.000379s ]
+SQL: SELECT goods.main_title AS main_title,goods.goods_img AS goods_img,goods.price AS price,goods.old_price AS old_price,goods.buy AS buy,goods.gid AS gid FROM yy_goods goods INNER JOIN yy_category category ON goods.cid = category.cid INNER JOIN yy_area area ON goods.aid = area.aid INNER JOIN yy_shops shops ON goods.sid = shops.sid ORDER BY goods.buy desc LIMIT 5   [ RunTime:0.000555s ]
+SQL: SELECT goods.cid AS cid,category.cid AS cid,category.cname AS cname FROM yy_goods goods INNER JOIN yy_category category ON goods.cid = category.cid INNER JOIN yy_area area ON goods.aid = area.aid INNER JOIN yy_shops shops ON goods.sid = shops.sid GROUP BY goods.cid ORDER BY goods.buy desc LIMIT 7   [ RunTime:0.000435s ]
+SQL: SELECT COUNT(*) AS tp_count FROM yy_goods goods INNER JOIN yy_category category ON goods.cid = category.cid INNER JOIN yy_area area ON goods.aid = area.aid INNER JOIN yy_shops shops ON goods.sid = shops.sid WHERE ( goods.price > '' ) LIMIT 1   [ RunTime:0.000305s ]
+SQL: SELECT goods.gid AS gid,goods.cid AS cid,goods.sid AS sid,goods.aid AS aid,goods.price AS price,goods.old_price AS old_price,goods.main_title AS main_title,goods.sub_title AS sub_title,goods.buy AS buy,goods.goods_img AS goods_img,category.cid AS cid,area.aid AS aid,shops.sid AS sid FROM yy_goods goods INNER JOIN yy_category category ON goods.cid = category.cid INNER JOIN yy_area area ON goods.aid = area.aid INNER JOIN yy_shops shops ON goods.sid = shops.sid WHERE ( goods.price > '' ) LIMIT 0,10   [ RunTime:0.000344s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 32 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 33 行.
+NOTIC: [8] Use of undefined constant Member - assumed 'Member' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 90 行.
+NOTIC: [8] Use of undefined constant Member - assumed 'Member' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 93 行.
+NOTIC: [8] Use of undefined constant Member - assumed 'Member' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 104 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 104 行.
+NOTIC: [8] Use of undefined constant Member - assumed 'Member' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 104 行.
+NOTIC: [8] Use of undefined constant Member - assumed 'Member' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 105 行.
+NOTIC: [8] Use of undefined constant sonCategory - assumed 'sonCategory' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 133 行.
+NOTIC: [8] Undefined variable: sonCategory /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 135 行.
+NOTIC: [8] Use of undefined constant sonArea - assumed 'sonArea' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 146 行.
+NOTIC: [8] Undefined variable: sonArea /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 147 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.016377s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016431s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000256s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000229s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000161s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000309s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001101s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000419s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000467s ]
+
+[ 2015-07-10T17:05:55+08:00 ] 120.36.98.30 /YYtuangou/index.php/Index/Index/index/cid/7
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000539s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000623s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000337s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000388s ]
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: [8] Undefined index: uid /alidata/www/default/YYtuangou/APP/Modules/Index/Action/CommonAction.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `yy_category` [ RunTime:0.000690s ]
+SQL: SELECT `pid` FROM `yy_category` WHERE ( `cid` = 7 ) LIMIT 1   [ RunTime:0.000186s ]
+SQL: SHOW COLUMNS FROM `yy_area` [ RunTime:0.000389s ]
+SQL: SELECT `aname`,`aid` FROM `yy_area` WHERE ( `pid` = 0 ) AND ( `display` = 1 ) ORDER BY sort asc  [ RunTime:0.000212s ]
+SQL: SELECT `pid` FROM `yy_category` WHERE ( `cid` = 7 ) LIMIT 1   [ RunTime:0.000145s ]
+SQL: SELECT `cname`,`cid` FROM `yy_category` WHERE ( `pid` = 0 ) AND ( `display` = 1 ) ORDER BY sort asc LIMIT 7   [ RunTime:0.000176s ]
+SQL: SELECT `cname`,`cid` FROM `yy_category` WHERE ( `pid` = 7 ) AND ( `display` = 1 ) ORDER BY sort asc LIMIT 7   [ RunTime:0.000162s ]
+SQL: SELECT `cid` FROM `yy_category` WHERE ( `pid` = 7 )  [ RunTime:0.000143s ]
+SQL: SHOW COLUMNS FROM `yy_goods` [ RunTime:0.000533s ]
+SQL: SHOW COLUMNS FROM `yy_category` [ RunTime:0.000413s ]
+SQL: SHOW COLUMNS FROM `yy_area` [ RunTime:0.000374s ]
+SQL: SHOW COLUMNS FROM `yy_shops` [ RunTime:0.000408s ]
+SQL: SELECT goods.cid AS cid,category.cid AS cid,category.cname AS cname FROM yy_goods goods INNER JOIN yy_category category ON goods.cid = category.cid INNER JOIN yy_area area ON goods.aid = area.aid INNER JOIN yy_shops shops ON goods.sid = shops.sid GROUP BY goods.cid ORDER BY goods.buy desc LIMIT 7   [ RunTime:0.000439s ]
+SQL: SELECT COUNT(*) AS tp_count FROM yy_goods goods INNER JOIN yy_category category ON goods.cid = category.cid INNER JOIN yy_area area ON goods.aid = area.aid INNER JOIN yy_shops shops ON goods.sid = shops.sid WHERE ( goods.cid IN (null,7) ) AND ( goods.price > '' ) LIMIT 1   [ RunTime:0.000324s ]
+NOTIC: [8] Undefined variable: url /alidata/www/default/YYtuangou/APP/Class/Page.class.php 第 85 行.
+NOTIC: [8] Array to string conversion /alidata/www/default/YYtuangou/APP/Class/Page.class.php 第 85 行.
+SQL: SELECT goods.gid AS gid,goods.cid AS cid,goods.sid AS sid,goods.aid AS aid,goods.price AS price,goods.old_price AS old_price,goods.main_title AS main_title,goods.sub_title AS sub_title,goods.buy AS buy,goods.goods_img AS goods_img,category.cid AS cid,area.aid AS aid,shops.sid AS sid FROM yy_goods goods INNER JOIN yy_category category ON goods.cid = category.cid INNER JOIN yy_area area ON goods.aid = area.aid INNER JOIN yy_shops shops ON goods.sid = shops.sid WHERE ( goods.cid IN (null,7) ) AND ( goods.price > '' ) LIMIT 0,10   [ RunTime:0.000349s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 32 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 33 行.
+NOTIC: [8] Use of undefined constant Member - assumed 'Member' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 90 行.
+NOTIC: [8] Use of undefined constant Member - assumed 'Member' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 93 行.
+NOTIC: [8] Use of undefined constant Member - assumed 'Member' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 104 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 104 行.
+NOTIC: [8] Use of undefined constant Member - assumed 'Member' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 104 行.
+NOTIC: [8] Use of undefined constant Member - assumed 'Member' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 105 行.
+NOTIC: [8] Use of undefined constant sonCategory - assumed 'sonCategory' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 133 行.
+NOTIC: [8] Undefined variable: sonCategory /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 135 行.
+NOTIC: [8] Use of undefined constant sonArea - assumed 'sonArea' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 146 行.
+NOTIC: [8] Undefined variable: sonArea /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 147 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.016995s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017061s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000311s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000241s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000156s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000296s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001167s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000420s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000512s ]
+
+[ 2015-07-10T17:05:59+08:00 ] 120.36.98.30 /YYtuangou/index.php/Index/Detail/index/gid/45
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000574s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000674s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000371s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000425s ]
+NOTIC: 建议使用I方法替代_get
+NOTIC: [8] Undefined index: uid /alidata/www/default/YYtuangou/APP/Modules/Index/Action/CommonAction.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `yy_goods` [ RunTime:0.000750s ]
+SQL: SHOW COLUMNS FROM `yy_category` [ RunTime:0.000510s ]
+SQL: SHOW COLUMNS FROM `yy_area` [ RunTime:0.000403s ]
+SQL: SHOW COLUMNS FROM `yy_shops` [ RunTime:0.000460s ]
+SQL: SHOW COLUMNS FROM `yy_goods_detail` [ RunTime:0.000353s ]
+SQL: SELECT goods.gid AS gid,goods.cid AS cid,goods.aid AS aid,goods.sid AS sid,goods.main_title AS main_title,goods.sub_title AS sub_title,goods.price AS price,goods.old_price AS old_price,goods.buy AS buy,goods.goods_img AS goods_img,goods.begin_time AS begin_time,goods.end_time AS end_time,category.cid AS cid,category.cname AS cname,category.key_words AS key_words,category.title AS title,category.description AS description,category.sort AS sort,category.display AS display,category.pid AS pid,area.aid AS aid,area.aname AS aname,shops.sid AS sid,shops.shopname AS shopname,shops.shopaddress AS shopaddress,shops.metroaddress AS metroaddress,shops.shoptel AS shoptel,shops.shopcoord AS shopcoord,goods_detail.goods_id AS goods_id,goods_detail.goods_server AS goods_server,goods_detail.detail AS detail FROM yy_goods goods INNER JOIN yy_category category ON goods.cid = category.cid INNER JOIN yy_area area ON goods.aid = area.aid INNER JOIN yy_shops shops ON goods.sid = shops.sid  JOIN yy_goods_detail goods_detail ON goods.gid = goods_detail.goods_id WHERE ( goods.gid = 45 ) LIMIT 1   [ RunTime:0.000470s ]
+NOTIC: [8] Undefined offset: 1 /alidata/www/default/YYtuangou/APP/Modules/Index/Action/DetailAction.class.php 第 35 行.
+NOTIC: [8] Undefined index:  /alidata/www/default/YYtuangou/APP/Modules/Index/Action/DetailAction.class.php 第 35 行.
+SQL: SELECT goods.cid AS cid,category.cid AS cid FROM yy_goods goods INNER JOIN yy_category category ON goods.cid = category.cid INNER JOIN yy_area area ON goods.aid = area.aid INNER JOIN yy_shops shops ON goods.sid = shops.sid  JOIN yy_goods_detail goods_detail ON goods.gid = goods_detail.goods_id WHERE ( goods.gid = 45 ) LIMIT 1   [ RunTime:0.000232s ]
+SQL: SELECT goods.gid AS gid,goods.cid AS cid,goods.aid AS aid,goods.sid AS sid,goods.main_title AS main_title,goods.sub_title AS sub_title,goods.price AS price,goods.old_price AS old_price,goods.buy AS buy,goods.goods_img AS goods_img,goods.begin_time AS begin_time,goods.end_time AS end_time,category.cid AS cid,category.cname AS cname,category.key_words AS key_words,category.title AS title,category.description AS description,category.sort AS sort,category.display AS display,category.pid AS pid,area.aid AS aid,area.aname AS aname,shops.sid AS sid,shops.shopname AS shopname,shops.shopaddress AS shopaddress,shops.metroaddress AS metroaddress,shops.shoptel AS shoptel,shops.shopcoord AS shopcoord,goods_detail.goods_id AS goods_id,goods_detail.goods_server AS goods_server,goods_detail.detail AS detail FROM yy_goods goods INNER JOIN yy_category category ON goods.cid = category.cid INNER JOIN yy_area area ON goods.aid = area.aid INNER JOIN yy_shops shops ON goods.sid = shops.sid  JOIN yy_goods_detail goods_detail ON goods.gid = goods_detail.goods_id WHERE ( goods.cid = '7' ) ORDER BY goods.buy desc LIMIT 5   [ RunTime:0.001002s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/060237d53a2c72bef4fccd3aead26c57.php 第 32 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/060237d53a2c72bef4fccd3aead26c57.php 第 33 行.
+NOTIC: [8] Use of undefined constant Member - assumed 'Member' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/060237d53a2c72bef4fccd3aead26c57.php 第 90 行.
+NOTIC: [8] Use of undefined constant Member - assumed 'Member' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/060237d53a2c72bef4fccd3aead26c57.php 第 93 行.
+NOTIC: [8] Use of undefined constant Member - assumed 'Member' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/060237d53a2c72bef4fccd3aead26c57.php 第 104 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/060237d53a2c72bef4fccd3aead26c57.php 第 104 行.
+NOTIC: [8] Use of undefined constant Member - assumed 'Member' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/060237d53a2c72bef4fccd3aead26c57.php 第 104 行.
+NOTIC: [8] Use of undefined constant Member - assumed 'Member' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/060237d53a2c72bef4fccd3aead26c57.php 第 105 行.
+NOTIC: [8] Use of undefined constant Member - assumed 'Member' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/060237d53a2c72bef4fccd3aead26c57.php 第 138 行.
+NOTIC: [8] Use of undefined constant Member - assumed 'Member' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/060237d53a2c72bef4fccd3aead26c57.php 第 139 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.013556s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013611s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000266s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000319s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000188s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000324s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001233s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000429s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000478s ]
+
+[ 2015-07-10T17:06:52+08:00 ] 120.36.98.30 /YYtuangou/index.php/Index/Detail/index/gid/
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000538s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000613s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000362s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000414s ]
+NOTIC: 建议使用I方法替代_get
+NOTIC: [8] Undefined index: uid /alidata/www/default/YYtuangou/APP/Modules/Index/Action/CommonAction.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `yy_goods` [ RunTime:0.000792s ]
+SQL: SHOW COLUMNS FROM `yy_category` [ RunTime:0.000449s ]
+SQL: SHOW COLUMNS FROM `yy_area` [ RunTime:0.000375s ]
+SQL: SHOW COLUMNS FROM `yy_shops` [ RunTime:0.000415s ]
+SQL: SHOW COLUMNS FROM `yy_goods_detail` [ RunTime:0.000346s ]
+SQL: SELECT goods.gid AS gid,goods.cid AS cid,goods.aid AS aid,goods.sid AS sid,goods.main_title AS main_title,goods.sub_title AS sub_title,goods.price AS price,goods.old_price AS old_price,goods.buy AS buy,goods.goods_img AS goods_img,goods.begin_time AS begin_time,goods.end_time AS end_time,category.cid AS cid,category.cname AS cname,category.key_words AS key_words,category.title AS title,category.description AS description,category.sort AS sort,category.display AS display,category.pid AS pid,area.aid AS aid,area.aname AS aname,shops.sid AS sid,shops.shopname AS shopname,shops.shopaddress AS shopaddress,shops.metroaddress AS metroaddress,shops.shoptel AS shoptel,shops.shopcoord AS shopcoord,goods_detail.goods_id AS goods_id,goods_detail.goods_server AS goods_server,goods_detail.detail AS detail FROM yy_goods goods INNER JOIN yy_category category ON goods.cid = category.cid INNER JOIN yy_area area ON goods.aid = area.aid INNER JOIN yy_shops shops ON goods.sid = shops.sid  JOIN yy_goods_detail goods_detail ON goods.gid = goods_detail.goods_id WHERE ( goods.gid = 0 ) LIMIT 1   [ RunTime:0.000340s ]
+NOTIC: [8] Undefined index: goods_img /alidata/www/default/YYtuangou/APP/Modules/Index/Action/DetailAction.class.php 第 25 行.
+NOTIC: [8] Undefined index: end_time /alidata/www/default/YYtuangou/APP/Modules/Index/Action/DetailAction.class.php 第 26 行.
+NOTIC: [8] Undefined index: goods_server /alidata/www/default/YYtuangou/APP/Modules/Index/Action/DetailAction.class.php 第 31 行.
+NOTIC: [2] array_slice() expects parameter 1 to be array, boolean given /alidata/www/default/YYtuangou/APP/Modules/Index/Action/DetailAction.class.php 第 31 行.
+NOTIC: [8] Undefined index:  /alidata/www/default/YYtuangou/APP/Modules/Index/Action/DetailAction.class.php 第 34 行.
+NOTIC: [8] Undefined index:  /alidata/www/default/YYtuangou/APP/Modules/Index/Action/DetailAction.class.php 第 35 行.
+SQL: SELECT goods.cid AS cid,category.cid AS cid FROM yy_goods goods INNER JOIN yy_category category ON goods.cid = category.cid INNER JOIN yy_area area ON goods.aid = area.aid INNER JOIN yy_shops shops ON goods.sid = shops.sid  JOIN yy_goods_detail goods_detail ON goods.gid = goods_detail.goods_id WHERE ( goods.gid = 0 ) LIMIT 1   [ RunTime:0.000245s ]
+SQL: SELECT goods.gid AS gid,goods.cid AS cid,goods.aid AS aid,goods.sid AS sid,goods.main_title AS main_title,goods.sub_title AS sub_title,goods.price AS price,goods.old_price AS old_price,goods.buy AS buy,goods.goods_img AS goods_img,goods.begin_time AS begin_time,goods.end_time AS end_time,category.cid AS cid,category.cname AS cname,category.key_words AS key_words,category.title AS title,category.description AS description,category.sort AS sort,category.display AS display,category.pid AS pid,area.aid AS aid,area.aname AS aname,shops.sid AS sid,shops.shopname AS shopname,shops.shopaddress AS shopaddress,shops.metroaddress AS metroaddress,shops.shoptel AS shoptel,shops.shopcoord AS shopcoord,goods_detail.goods_id AS goods_id,goods_detail.goods_server AS goods_server,goods_detail.detail AS detail FROM yy_goods goods INNER JOIN yy_category category ON goods.cid = category.cid INNER JOIN yy_area area ON goods.aid = area.aid INNER JOIN yy_shops shops ON goods.sid = shops.sid  JOIN yy_goods_detail goods_detail ON goods.gid = goods_detail.goods_id WHERE ( goods.cid = null ) ORDER BY goods.buy desc LIMIT 5   [ RunTime:0.000631s ]
+NOTIC: [2] Invalid argument supplied for foreach() /alidata/www/default/YYtuangou/APP/Modules/Index/Action/DetailAction.class.php 第 60 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/060237d53a2c72bef4fccd3aead26c57.php 第 32 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/060237d53a2c72bef4fccd3aead26c57.php 第 33 行.
+NOTIC: [8] Use of undefined constant Member - assumed 'Member' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/060237d53a2c72bef4fccd3aead26c57.php 第 90 行.
+NOTIC: [8] Use of undefined constant Member - assumed 'Member' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/060237d53a2c72bef4fccd3aead26c57.php 第 93 行.
+NOTIC: [8] Use of undefined constant Member - assumed 'Member' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/060237d53a2c72bef4fccd3aead26c57.php 第 104 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/060237d53a2c72bef4fccd3aead26c57.php 第 104 行.
+NOTIC: [8] Use of undefined constant Member - assumed 'Member' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/060237d53a2c72bef4fccd3aead26c57.php 第 104 行.
+NOTIC: [8] Use of undefined constant Member - assumed 'Member' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/060237d53a2c72bef4fccd3aead26c57.php 第 105 行.
+NOTIC: [8] Undefined index: aid /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/060237d53a2c72bef4fccd3aead26c57.php 第 118 行.
+NOTIC: [8] Undefined index: aname /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/060237d53a2c72bef4fccd3aead26c57.php 第 118 行.
+NOTIC: [8] Undefined index: cid /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/060237d53a2c72bef4fccd3aead26c57.php 第 118 行.
+NOTIC: [8] Undefined index: cname /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/060237d53a2c72bef4fccd3aead26c57.php 第 118 行.
+NOTIC: [8] Undefined index: shopname /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/060237d53a2c72bef4fccd3aead26c57.php 第 118 行.
+NOTIC: [8] Undefined index: main_title /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/060237d53a2c72bef4fccd3aead26c57.php 第 123 行.
+NOTIC: [8] Undefined index: sub_title /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/060237d53a2c72bef4fccd3aead26c57.php 第 124 行.
+NOTIC: [8] Undefined index: price /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/060237d53a2c72bef4fccd3aead26c57.php 第 130 行.
+NOTIC: [8] Undefined index: old_price /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/060237d53a2c72bef4fccd3aead26c57.php 第 134 行.
+NOTIC: [8] Use of undefined constant Member - assumed 'Member' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/060237d53a2c72bef4fccd3aead26c57.php 第 138 行.
+NOTIC: [8] Undefined index: gid /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/060237d53a2c72bef4fccd3aead26c57.php 第 138 行.
+NOTIC: [8] Use of undefined constant Member - assumed 'Member' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/060237d53a2c72bef4fccd3aead26c57.php 第 139 行.
+NOTIC: [8] Undefined index: gid /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/060237d53a2c72bef4fccd3aead26c57.php 第 139 行.
+NOTIC: [8] Undefined index: buy /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/060237d53a2c72bef4fccd3aead26c57.php 第 143 行.
+NOTIC: [8] Undefined index: gid /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/060237d53a2c72bef4fccd3aead26c57.php 第 165 行.
+NOTIC: [8] Undefined index: shopname /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/060237d53a2c72bef4fccd3aead26c57.php 第 186 行.
+NOTIC: [8] Undefined index: shopaddress /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/060237d53a2c72bef4fccd3aead26c57.php 第 189 行.
+NOTIC: [8] Undefined index: metroaddress /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/060237d53a2c72bef4fccd3aead26c57.php 第 193 行.
+NOTIC: [8] Undefined index: shoptel /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/060237d53a2c72bef4fccd3aead26c57.php 第 197 行.
+NOTIC: [8] Undefined index: detail /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/060237d53a2c72bef4fccd3aead26c57.php 第 203 行.
+NOTIC: [8] Undefined index: shopcoord /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/060237d53a2c72bef4fccd3aead26c57.php 第 280 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.012923s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012970s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000272s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000227s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000146s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000310s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001094s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000420s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000470s ]
+
+[ 2015-07-10T17:06:54+08:00 ] 120.36.98.30 /YYtuangou/index.php/Member/Cart/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000565s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000655s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000337s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000387s ]
+SQL: SHOW COLUMNS FROM `yy_category` [ RunTime:0.000664s ]
+SQL: SELECT `cname`,`cid` FROM `yy_category` WHERE ( `pid` = 0 ) AND ( `display` = 1 ) ORDER BY sort asc LIMIT 4   [ RunTime:0.000223s ]
+NOTIC: [2048] Declaration of UserModel::check() should be compatible with Model::check($value, $rule, $type = 'regex') /alidata/www/default/YYtuangou/APP/Modules/Member/Model/UserModel.class.php 第 63 行.
+SQL: SHOW COLUMNS FROM `yy_user` [ RunTime:0.000400s ]
+SQL: SELECT * FROM `yy_address`  [ RunTime:0.000158s ]
+
+[ 2015-07-10T19:13:07+08:00 ] 120.40.96.226 /YYtuangou/index.php
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000408s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000491s ]
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: [8] Undefined index: uid /alidata/www/default/YYtuangou/APP/Modules/Index/Action/CommonAction.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `yy_category` [ RunTime:0.000892s ]
+SQL: SELECT `cname`,`cid` FROM `yy_category` WHERE ( `pid` = 0 ) AND ( `display` = 1 ) ORDER BY sort asc LIMIT 4   [ RunTime:0.000302s ]
+SQL: SHOW COLUMNS FROM `yy_area` [ RunTime:0.000435s ]
+SQL: SELECT `aname`,`aid` FROM `yy_area` WHERE ( `pid` = 0 ) AND ( `display` = 1 ) ORDER BY sort asc  [ RunTime:0.000170s ]
+SQL: SELECT `cname`,`cid` FROM `yy_category` WHERE ( `pid` = 0 ) AND ( `display` = 1 ) ORDER BY sort asc LIMIT 7   [ RunTime:0.000180s ]
+SQL: SHOW COLUMNS FROM `yy_goods` [ RunTime:0.000532s ]
+SQL: SHOW COLUMNS FROM `yy_category` [ RunTime:0.000421s ]
+SQL: SHOW COLUMNS FROM `yy_area` [ RunTime:0.000478s ]
+SQL: SHOW COLUMNS FROM `yy_shops` [ RunTime:0.000442s ]
+SQL: SELECT goods.main_title AS main_title,goods.goods_img AS goods_img,goods.price AS price,goods.old_price AS old_price,goods.buy AS buy,goods.gid AS gid FROM yy_goods goods INNER JOIN yy_category category ON goods.cid = category.cid INNER JOIN yy_area area ON goods.aid = area.aid INNER JOIN yy_shops shops ON goods.sid = shops.sid ORDER BY goods.buy desc LIMIT 5   [ RunTime:0.000545s ]
+SQL: SELECT goods.cid AS cid,category.cid AS cid,category.cname AS cname FROM yy_goods goods INNER JOIN yy_category category ON goods.cid = category.cid INNER JOIN yy_area area ON goods.aid = area.aid INNER JOIN yy_shops shops ON goods.sid = shops.sid GROUP BY goods.cid ORDER BY goods.buy desc LIMIT 7   [ RunTime:0.000408s ]
+SQL: SELECT COUNT(*) AS tp_count FROM yy_goods goods INNER JOIN yy_category category ON goods.cid = category.cid INNER JOIN yy_area area ON goods.aid = area.aid INNER JOIN yy_shops shops ON goods.sid = shops.sid WHERE ( goods.price > '' ) LIMIT 1   [ RunTime:0.000338s ]
+SQL: SELECT goods.gid AS gid,goods.cid AS cid,goods.sid AS sid,goods.aid AS aid,goods.price AS price,goods.old_price AS old_price,goods.main_title AS main_title,goods.sub_title AS sub_title,goods.buy AS buy,goods.goods_img AS goods_img,category.cid AS cid,area.aid AS aid,shops.sid AS sid FROM yy_goods goods INNER JOIN yy_category category ON goods.cid = category.cid INNER JOIN yy_area area ON goods.aid = area.aid INNER JOIN yy_shops shops ON goods.sid = shops.sid WHERE ( goods.price > '' ) LIMIT 0,10   [ RunTime:0.000336s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 32 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 33 行.
+NOTIC: [8] Use of undefined constant Member - assumed 'Member' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 90 行.
+NOTIC: [8] Use of undefined constant Member - assumed 'Member' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 93 行.
+NOTIC: [8] Use of undefined constant Member - assumed 'Member' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 104 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 104 行.
+NOTIC: [8] Use of undefined constant Member - assumed 'Member' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 104 行.
+NOTIC: [8] Use of undefined constant Member - assumed 'Member' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 105 行.
+NOTIC: [8] Use of undefined constant sonCategory - assumed 'sonCategory' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 133 行.
+NOTIC: [8] Undefined variable: sonCategory /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 135 行.
+NOTIC: [8] Use of undefined constant sonArea - assumed 'sonArea' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 146 行.
+NOTIC: [8] Undefined variable: sonArea /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 147 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.016547s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016605s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000342s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000275s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000155s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000310s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001232s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000412s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000462s ]
+
+[ 2015-07-10T19:13:09+08:00 ] 120.40.96.226 /YYtuangou/index.php/Member/Index/getRecentView
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000548s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000630s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000392s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000442s ]
+NOTIC: [8] Undefined index: uid /alidata/www/default/YYtuangou/APP/Modules/Member/Action/IndexAction.class.php 第 6 行.
+SQL: SHOW COLUMNS FROM `yy_category` [ RunTime:0.000696s ]
+SQL: SELECT `cname`,`cid` FROM `yy_category` WHERE ( `pid` = 0 ) AND ( `display` = 1 ) ORDER BY sort asc LIMIT 4   [ RunTime:0.000228s ]
+
+[ 2015-07-10T19:13:09+08:00 ] 120.40.96.226 /YYtuangou/index.php/Member/Cart/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000547s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000611s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000342s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000389s ]
+SQL: SHOW COLUMNS FROM `yy_category` [ RunTime:0.000588s ]
+SQL: SELECT `cname`,`cid` FROM `yy_category` WHERE ( `pid` = 0 ) AND ( `display` = 1 ) ORDER BY sort asc LIMIT 4   [ RunTime:0.000207s ]
+NOTIC: [2048] Declaration of UserModel::check() should be compatible with Model::check($value, $rule, $type = 'regex') /alidata/www/default/YYtuangou/APP/Modules/Member/Model/UserModel.class.php 第 63 行.
+SQL: SHOW COLUMNS FROM `yy_user` [ RunTime:0.000377s ]
+SQL: SELECT * FROM `yy_address`  [ RunTime:0.000149s ]
+
+[ 2015-07-10T19:13:13+08:00 ] 120.40.96.226 /YYtuangou/index.php/Member/Cart/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000511s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000587s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000336s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000385s ]
+SQL: SHOW COLUMNS FROM `yy_category` [ RunTime:0.000751s ]
+SQL: SELECT `cname`,`cid` FROM `yy_category` WHERE ( `pid` = 0 ) AND ( `display` = 1 ) ORDER BY sort asc LIMIT 4   [ RunTime:0.000255s ]
+NOTIC: [2048] Declaration of UserModel::check() should be compatible with Model::check($value, $rule, $type = 'regex') /alidata/www/default/YYtuangou/APP/Modules/Member/Model/UserModel.class.php 第 63 行.
+SQL: SHOW COLUMNS FROM `yy_user` [ RunTime:0.000412s ]
+SQL: SELECT * FROM `yy_address`  [ RunTime:0.000154s ]
+
+[ 2015-07-10T19:13:15+08:00 ] 120.40.96.226 /YYtuangou/index.php/Index/Index/index/cid/1
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000518s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000593s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000341s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000393s ]
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: [8] Undefined index: uid /alidata/www/default/YYtuangou/APP/Modules/Index/Action/CommonAction.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `yy_category` [ RunTime:0.000673s ]
+SQL: SELECT `pid` FROM `yy_category` WHERE ( `cid` = 1 ) LIMIT 1   [ RunTime:0.000182s ]
+SQL: SHOW COLUMNS FROM `yy_area` [ RunTime:0.000388s ]
+SQL: SELECT `aname`,`aid` FROM `yy_area` WHERE ( `pid` = 0 ) AND ( `display` = 1 ) ORDER BY sort asc  [ RunTime:0.000208s ]
+SQL: SELECT `pid` FROM `yy_category` WHERE ( `cid` = 1 ) LIMIT 1   [ RunTime:0.000143s ]
+SQL: SELECT `cname`,`cid` FROM `yy_category` WHERE ( `pid` = 0 ) AND ( `display` = 1 ) ORDER BY sort asc LIMIT 7   [ RunTime:0.000172s ]
+SQL: SELECT `cname`,`cid` FROM `yy_category` WHERE ( `pid` = 1 ) AND ( `display` = 1 ) ORDER BY sort asc LIMIT 7   [ RunTime:0.000186s ]
+SQL: SELECT `cid` FROM `yy_category` WHERE ( `pid` = 1 )  [ RunTime:0.000168s ]
+SQL: SHOW COLUMNS FROM `yy_goods` [ RunTime:0.000559s ]
+SQL: SHOW COLUMNS FROM `yy_category` [ RunTime:0.000447s ]
+SQL: SHOW COLUMNS FROM `yy_area` [ RunTime:0.000374s ]
+SQL: SHOW COLUMNS FROM `yy_shops` [ RunTime:0.000431s ]
+SQL: SELECT goods.cid AS cid,category.cid AS cid,category.cname AS cname FROM yy_goods goods INNER JOIN yy_category category ON goods.cid = category.cid INNER JOIN yy_area area ON goods.aid = area.aid INNER JOIN yy_shops shops ON goods.sid = shops.sid GROUP BY goods.cid ORDER BY goods.buy desc LIMIT 7   [ RunTime:0.000426s ]
+SQL: SELECT COUNT(*) AS tp_count FROM yy_goods goods INNER JOIN yy_category category ON goods.cid = category.cid INNER JOIN yy_area area ON goods.aid = area.aid INNER JOIN yy_shops shops ON goods.sid = shops.sid WHERE ( goods.cid IN ('2','4',1) ) AND ( goods.price > '' ) LIMIT 1   [ RunTime:0.000318s ]
+NOTIC: [8] Undefined variable: url /alidata/www/default/YYtuangou/APP/Class/Page.class.php 第 85 行.
+NOTIC: [8] Array to string conversion /alidata/www/default/YYtuangou/APP/Class/Page.class.php 第 85 行.
+SQL: SELECT goods.gid AS gid,goods.cid AS cid,goods.sid AS sid,goods.aid AS aid,goods.price AS price,goods.old_price AS old_price,goods.main_title AS main_title,goods.sub_title AS sub_title,goods.buy AS buy,goods.goods_img AS goods_img,category.cid AS cid,area.aid AS aid,shops.sid AS sid FROM yy_goods goods INNER JOIN yy_category category ON goods.cid = category.cid INNER JOIN yy_area area ON goods.aid = area.aid INNER JOIN yy_shops shops ON goods.sid = shops.sid WHERE ( goods.cid IN ('2','4',1) ) AND ( goods.price > '' ) LIMIT 0,10   [ RunTime:0.000398s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 32 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 33 行.
+NOTIC: [8] Use of undefined constant Member - assumed 'Member' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 90 行.
+NOTIC: [8] Use of undefined constant Member - assumed 'Member' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 93 行.
+NOTIC: [8] Use of undefined constant Member - assumed 'Member' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 104 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 104 行.
+NOTIC: [8] Use of undefined constant Member - assumed 'Member' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 104 行.
+NOTIC: [8] Use of undefined constant Member - assumed 'Member' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 105 行.
+NOTIC: [8] Use of undefined constant sonCategory - assumed 'sonCategory' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 133 行.
+NOTIC: [8] Use of undefined constant sonArea - assumed 'sonArea' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 146 行.
+NOTIC: [8] Undefined variable: sonArea /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 147 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.016338s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016402s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000317s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000238s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000151s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000292s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001128s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000414s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000463s ]
+
+[ 2015-07-10T19:13:16+08:00 ] 120.40.96.226 /YYtuangou/index.php/Index/Index/index/cid/6
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000537s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000612s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000360s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000413s ]
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: [8] Undefined index: uid /alidata/www/default/YYtuangou/APP/Modules/Index/Action/CommonAction.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `yy_category` [ RunTime:0.000643s ]
+SQL: SELECT `pid` FROM `yy_category` WHERE ( `cid` = 6 ) LIMIT 1   [ RunTime:0.000187s ]
+SQL: SHOW COLUMNS FROM `yy_area` [ RunTime:0.000441s ]
+SQL: SELECT `aname`,`aid` FROM `yy_area` WHERE ( `pid` = 0 ) AND ( `display` = 1 ) ORDER BY sort asc  [ RunTime:0.000192s ]
+SQL: SELECT `pid` FROM `yy_category` WHERE ( `cid` = 6 ) LIMIT 1   [ RunTime:0.000141s ]
+SQL: SELECT `cname`,`cid` FROM `yy_category` WHERE ( `pid` = 0 ) AND ( `display` = 1 ) ORDER BY sort asc LIMIT 7   [ RunTime:0.000196s ]
+SQL: SELECT `cname`,`cid` FROM `yy_category` WHERE ( `pid` = 6 ) AND ( `display` = 1 ) ORDER BY sort asc LIMIT 7   [ RunTime:0.000166s ]
+SQL: SELECT `cid` FROM `yy_category` WHERE ( `pid` = 6 )  [ RunTime:0.000141s ]
+SQL: SHOW COLUMNS FROM `yy_goods` [ RunTime:0.000499s ]
+SQL: SHOW COLUMNS FROM `yy_category` [ RunTime:0.000488s ]
+SQL: SHOW COLUMNS FROM `yy_area` [ RunTime:0.000375s ]
+SQL: SHOW COLUMNS FROM `yy_shops` [ RunTime:0.000388s ]
+SQL: SELECT goods.cid AS cid,category.cid AS cid,category.cname AS cname FROM yy_goods goods INNER JOIN yy_category category ON goods.cid = category.cid INNER JOIN yy_area area ON goods.aid = area.aid INNER JOIN yy_shops shops ON goods.sid = shops.sid GROUP BY goods.cid ORDER BY goods.buy desc LIMIT 7   [ RunTime:0.000451s ]
+SQL: SELECT COUNT(*) AS tp_count FROM yy_goods goods INNER JOIN yy_category category ON goods.cid = category.cid INNER JOIN yy_area area ON goods.aid = area.aid INNER JOIN yy_shops shops ON goods.sid = shops.sid WHERE ( goods.cid IN ('10',6) ) AND ( goods.price > '' ) LIMIT 1   [ RunTime:0.000306s ]
+NOTIC: [8] Undefined variable: url /alidata/www/default/YYtuangou/APP/Class/Page.class.php 第 85 行.
+NOTIC: [8] Array to string conversion /alidata/www/default/YYtuangou/APP/Class/Page.class.php 第 85 行.
+SQL: SELECT goods.gid AS gid,goods.cid AS cid,goods.sid AS sid,goods.aid AS aid,goods.price AS price,goods.old_price AS old_price,goods.main_title AS main_title,goods.sub_title AS sub_title,goods.buy AS buy,goods.goods_img AS goods_img,category.cid AS cid,area.aid AS aid,shops.sid AS sid FROM yy_goods goods INNER JOIN yy_category category ON goods.cid = category.cid INNER JOIN yy_area area ON goods.aid = area.aid INNER JOIN yy_shops shops ON goods.sid = shops.sid WHERE ( goods.cid IN ('10',6) ) AND ( goods.price > '' ) LIMIT 0,10   [ RunTime:0.000374s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 32 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 33 行.
+NOTIC: [8] Use of undefined constant Member - assumed 'Member' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 90 行.
+NOTIC: [8] Use of undefined constant Member - assumed 'Member' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 93 行.
+NOTIC: [8] Use of undefined constant Member - assumed 'Member' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 104 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 104 行.
+NOTIC: [8] Use of undefined constant Member - assumed 'Member' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 104 行.
+NOTIC: [8] Use of undefined constant Member - assumed 'Member' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 105 行.
+NOTIC: [8] Use of undefined constant sonCategory - assumed 'sonCategory' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 133 行.
+NOTIC: [8] Use of undefined constant sonArea - assumed 'sonArea' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 146 行.
+NOTIC: [8] Undefined variable: sonArea /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 147 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.016433s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016494s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000301s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000233s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000162s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000341s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001179s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000429s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000479s ]
+
+[ 2015-07-10T19:13:17+08:00 ] 120.40.96.226 /YYtuangou/index.php/Index/Index/index/cid/7
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000513s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000590s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000332s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000384s ]
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: [8] Undefined index: uid /alidata/www/default/YYtuangou/APP/Modules/Index/Action/CommonAction.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `yy_category` [ RunTime:0.000680s ]
+SQL: SELECT `pid` FROM `yy_category` WHERE ( `cid` = 7 ) LIMIT 1   [ RunTime:0.000181s ]
+SQL: SHOW COLUMNS FROM `yy_area` [ RunTime:0.000385s ]
+SQL: SELECT `aname`,`aid` FROM `yy_area` WHERE ( `pid` = 0 ) AND ( `display` = 1 ) ORDER BY sort asc  [ RunTime:0.000185s ]
+SQL: SELECT `pid` FROM `yy_category` WHERE ( `cid` = 7 ) LIMIT 1   [ RunTime:0.000138s ]
+SQL: SELECT `cname`,`cid` FROM `yy_category` WHERE ( `pid` = 0 ) AND ( `display` = 1 ) ORDER BY sort asc LIMIT 7   [ RunTime:0.000175s ]
+SQL: SELECT `cname`,`cid` FROM `yy_category` WHERE ( `pid` = 7 ) AND ( `display` = 1 ) ORDER BY sort asc LIMIT 7   [ RunTime:0.000194s ]
+SQL: SELECT `cid` FROM `yy_category` WHERE ( `pid` = 7 )  [ RunTime:0.000137s ]
+SQL: SHOW COLUMNS FROM `yy_goods` [ RunTime:0.000534s ]
+SQL: SHOW COLUMNS FROM `yy_category` [ RunTime:0.000407s ]
+SQL: SHOW COLUMNS FROM `yy_area` [ RunTime:0.000403s ]
+SQL: SHOW COLUMNS FROM `yy_shops` [ RunTime:0.000381s ]
+SQL: SELECT goods.cid AS cid,category.cid AS cid,category.cname AS cname FROM yy_goods goods INNER JOIN yy_category category ON goods.cid = category.cid INNER JOIN yy_area area ON goods.aid = area.aid INNER JOIN yy_shops shops ON goods.sid = shops.sid GROUP BY goods.cid ORDER BY goods.buy desc LIMIT 7   [ RunTime:0.000424s ]
+SQL: SELECT COUNT(*) AS tp_count FROM yy_goods goods INNER JOIN yy_category category ON goods.cid = category.cid INNER JOIN yy_area area ON goods.aid = area.aid INNER JOIN yy_shops shops ON goods.sid = shops.sid WHERE ( goods.cid IN (null,7) ) AND ( goods.price > '' ) LIMIT 1   [ RunTime:0.000349s ]
+NOTIC: [8] Undefined variable: url /alidata/www/default/YYtuangou/APP/Class/Page.class.php 第 85 行.
+NOTIC: [8] Array to string conversion /alidata/www/default/YYtuangou/APP/Class/Page.class.php 第 85 行.
+SQL: SELECT goods.gid AS gid,goods.cid AS cid,goods.sid AS sid,goods.aid AS aid,goods.price AS price,goods.old_price AS old_price,goods.main_title AS main_title,goods.sub_title AS sub_title,goods.buy AS buy,goods.goods_img AS goods_img,category.cid AS cid,area.aid AS aid,shops.sid AS sid FROM yy_goods goods INNER JOIN yy_category category ON goods.cid = category.cid INNER JOIN yy_area area ON goods.aid = area.aid INNER JOIN yy_shops shops ON goods.sid = shops.sid WHERE ( goods.cid IN (null,7) ) AND ( goods.price > '' ) LIMIT 0,10   [ RunTime:0.000345s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 32 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 33 行.
+NOTIC: [8] Use of undefined constant Member - assumed 'Member' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 90 行.
+NOTIC: [8] Use of undefined constant Member - assumed 'Member' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 93 行.
+NOTIC: [8] Use of undefined constant Member - assumed 'Member' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 104 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 104 行.
+NOTIC: [8] Use of undefined constant Member - assumed 'Member' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 104 行.
+NOTIC: [8] Use of undefined constant Member - assumed 'Member' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 105 行.
+NOTIC: [8] Use of undefined constant sonCategory - assumed 'sonCategory' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 133 行.
+NOTIC: [8] Undefined variable: sonCategory /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 135 行.
+NOTIC: [8] Use of undefined constant sonArea - assumed 'sonArea' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 146 行.
+NOTIC: [8] Undefined variable: sonArea /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 147 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.016745s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016815s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000307s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000249s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000149s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000305s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001169s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000432s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000480s ]
+
+[ 2015-07-10T19:13:18+08:00 ] 120.40.96.226 /YYtuangou/index.php/Index/Index/index/cid/8
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000534s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000609s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000334s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000385s ]
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: [8] Undefined index: uid /alidata/www/default/YYtuangou/APP/Modules/Index/Action/CommonAction.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `yy_category` [ RunTime:0.005004s ]
+SQL: SELECT `pid` FROM `yy_category` WHERE ( `cid` = 8 ) LIMIT 1   [ RunTime:0.000185s ]
+SQL: SHOW COLUMNS FROM `yy_area` [ RunTime:0.000443s ]
+SQL: SELECT `aname`,`aid` FROM `yy_area` WHERE ( `pid` = 0 ) AND ( `display` = 1 ) ORDER BY sort asc  [ RunTime:0.000187s ]
+SQL: SELECT `pid` FROM `yy_category` WHERE ( `cid` = 8 ) LIMIT 1   [ RunTime:0.000180s ]
+SQL: SELECT `cname`,`cid` FROM `yy_category` WHERE ( `pid` = 0 ) AND ( `display` = 1 ) ORDER BY sort asc LIMIT 7   [ RunTime:0.000174s ]
+SQL: SELECT `cname`,`cid` FROM `yy_category` WHERE ( `pid` = 8 ) AND ( `display` = 1 ) ORDER BY sort asc LIMIT 7   [ RunTime:0.000160s ]
+SQL: SELECT `cid` FROM `yy_category` WHERE ( `pid` = 8 )  [ RunTime:0.000140s ]
+SQL: SHOW COLUMNS FROM `yy_goods` [ RunTime:0.000524s ]
+SQL: SHOW COLUMNS FROM `yy_category` [ RunTime:0.000421s ]
+SQL: SHOW COLUMNS FROM `yy_area` [ RunTime:0.000401s ]
+SQL: SHOW COLUMNS FROM `yy_shops` [ RunTime:0.000384s ]
+SQL: SELECT goods.cid AS cid,category.cid AS cid,category.cname AS cname FROM yy_goods goods INNER JOIN yy_category category ON goods.cid = category.cid INNER JOIN yy_area area ON goods.aid = area.aid INNER JOIN yy_shops shops ON goods.sid = shops.sid GROUP BY goods.cid ORDER BY goods.buy desc LIMIT 7   [ RunTime:0.000425s ]
+SQL: SELECT COUNT(*) AS tp_count FROM yy_goods goods INNER JOIN yy_category category ON goods.cid = category.cid INNER JOIN yy_area area ON goods.aid = area.aid INNER JOIN yy_shops shops ON goods.sid = shops.sid WHERE ( goods.cid IN (null,8) ) AND ( goods.price > '' ) LIMIT 1   [ RunTime:0.000323s ]
+NOTIC: [8] Undefined variable: url /alidata/www/default/YYtuangou/APP/Class/Page.class.php 第 85 行.
+NOTIC: [8] Array to string conversion /alidata/www/default/YYtuangou/APP/Class/Page.class.php 第 85 行.
+SQL: SELECT goods.gid AS gid,goods.cid AS cid,goods.sid AS sid,goods.aid AS aid,goods.price AS price,goods.old_price AS old_price,goods.main_title AS main_title,goods.sub_title AS sub_title,goods.buy AS buy,goods.goods_img AS goods_img,category.cid AS cid,area.aid AS aid,shops.sid AS sid FROM yy_goods goods INNER JOIN yy_category category ON goods.cid = category.cid INNER JOIN yy_area area ON goods.aid = area.aid INNER JOIN yy_shops shops ON goods.sid = shops.sid WHERE ( goods.cid IN (null,8) ) AND ( goods.price > '' ) LIMIT 0,10   [ RunTime:0.000348s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 32 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 33 行.
+NOTIC: [8] Use of undefined constant Member - assumed 'Member' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 90 行.
+NOTIC: [8] Use of undefined constant Member - assumed 'Member' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 93 行.
+NOTIC: [8] Use of undefined constant Member - assumed 'Member' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 104 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 104 行.
+NOTIC: [8] Use of undefined constant Member - assumed 'Member' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 104 行.
+NOTIC: [8] Use of undefined constant Member - assumed 'Member' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 105 行.
+NOTIC: [8] Use of undefined constant sonCategory - assumed 'sonCategory' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 133 行.
+NOTIC: [8] Undefined variable: sonCategory /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 135 行.
+NOTIC: [8] Use of undefined constant sonArea - assumed 'sonArea' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 146 行.
+NOTIC: [8] Undefined variable: sonArea /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 147 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.016234s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016286s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000259s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000230s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000145s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000309s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001077s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000399s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000449s ]
+
+[ 2015-07-10T19:13:40+08:00 ] 120.40.96.226 /YYtuangou/index.php/Admin/
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000515s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000593s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000370s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000433s ]
+
+[ 2015-07-10T19:13:43+08:00 ] 120.40.96.226 /YYtuangou/index.php/Admin/Login/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000555s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000631s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000330s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000390s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.005181s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005233s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001072s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000261s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000152s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000287s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001959s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000426s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000473s ]
+
+[ 2015-07-10T19:13:44+08:00 ] 120.40.96.226 /YYtuangou/index.php/Admin/Login/showCode
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000557s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000684s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000340s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000395s ]
+
+[ 2015-07-10T22:55:10+08:00 ] 112.64.235.253 /YYtuangou/
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000354s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000440s ]
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: [8] Undefined index: uid /alidata/www/default/YYtuangou/APP/Modules/Index/Action/CommonAction.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `yy_category` [ RunTime:0.000644s ]
+SQL: SELECT `cname`,`cid` FROM `yy_category` WHERE ( `pid` = 0 ) AND ( `display` = 1 ) ORDER BY sort asc LIMIT 4   [ RunTime:0.000299s ]
+SQL: SHOW COLUMNS FROM `yy_area` [ RunTime:0.000410s ]
+SQL: SELECT `aname`,`aid` FROM `yy_area` WHERE ( `pid` = 0 ) AND ( `display` = 1 ) ORDER BY sort asc  [ RunTime:0.000177s ]
+SQL: SELECT `cname`,`cid` FROM `yy_category` WHERE ( `pid` = 0 ) AND ( `display` = 1 ) ORDER BY sort asc LIMIT 7   [ RunTime:0.000194s ]
+SQL: SHOW COLUMNS FROM `yy_goods` [ RunTime:0.000508s ]
+SQL: SHOW COLUMNS FROM `yy_category` [ RunTime:0.000411s ]
+SQL: SHOW COLUMNS FROM `yy_area` [ RunTime:0.000390s ]
+SQL: SHOW COLUMNS FROM `yy_shops` [ RunTime:0.000392s ]
+SQL: SELECT goods.main_title AS main_title,goods.goods_img AS goods_img,goods.price AS price,goods.old_price AS old_price,goods.buy AS buy,goods.gid AS gid FROM yy_goods goods INNER JOIN yy_category category ON goods.cid = category.cid INNER JOIN yy_area area ON goods.aid = area.aid INNER JOIN yy_shops shops ON goods.sid = shops.sid ORDER BY goods.buy desc LIMIT 5   [ RunTime:0.000543s ]
+SQL: SELECT goods.cid AS cid,category.cid AS cid,category.cname AS cname FROM yy_goods goods INNER JOIN yy_category category ON goods.cid = category.cid INNER JOIN yy_area area ON goods.aid = area.aid INNER JOIN yy_shops shops ON goods.sid = shops.sid GROUP BY goods.cid ORDER BY goods.buy desc LIMIT 7   [ RunTime:0.000448s ]
+SQL: SELECT COUNT(*) AS tp_count FROM yy_goods goods INNER JOIN yy_category category ON goods.cid = category.cid INNER JOIN yy_area area ON goods.aid = area.aid INNER JOIN yy_shops shops ON goods.sid = shops.sid WHERE ( goods.price > '' ) LIMIT 1   [ RunTime:0.000325s ]
+SQL: SELECT goods.gid AS gid,goods.cid AS cid,goods.sid AS sid,goods.aid AS aid,goods.price AS price,goods.old_price AS old_price,goods.main_title AS main_title,goods.sub_title AS sub_title,goods.buy AS buy,goods.goods_img AS goods_img,category.cid AS cid,area.aid AS aid,shops.sid AS sid FROM yy_goods goods INNER JOIN yy_category category ON goods.cid = category.cid INNER JOIN yy_area area ON goods.aid = area.aid INNER JOIN yy_shops shops ON goods.sid = shops.sid WHERE ( goods.price > '' ) LIMIT 0,10   [ RunTime:0.000486s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 32 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 33 行.
+NOTIC: [8] Use of undefined constant Member - assumed 'Member' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 90 行.
+NOTIC: [8] Use of undefined constant Member - assumed 'Member' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 93 行.
+NOTIC: [8] Use of undefined constant Member - assumed 'Member' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 104 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 104 行.
+NOTIC: [8] Use of undefined constant Member - assumed 'Member' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 104 行.
+NOTIC: [8] Use of undefined constant Member - assumed 'Member' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 105 行.
+NOTIC: [8] Use of undefined constant sonCategory - assumed 'sonCategory' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 133 行.
+NOTIC: [8] Undefined variable: sonCategory /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 135 行.
+NOTIC: [8] Use of undefined constant sonArea - assumed 'sonArea' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 146 行.
+NOTIC: [8] Undefined variable: sonArea /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 147 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.019153s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019245s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000411s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000391s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000224s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000460s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001708s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000689s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000802s ]
+
+[ 2015-07-10T22:55:12+08:00 ] 14.204.117.42 /YYtuangou/
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000352s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000450s ]
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: 建议使用I方法替代_get
+NOTIC: [8] Undefined index: uid /alidata/www/default/YYtuangou/APP/Modules/Index/Action/CommonAction.class.php 第 13 行.
+SQL: SHOW COLUMNS FROM `yy_category` [ RunTime:0.000656s ]
+SQL: SHOW COLUMNS FROM `yy_area` [ RunTime:0.000417s ]
+SQL: SELECT `aname`,`aid` FROM `yy_area` WHERE ( `pid` = 0 ) AND ( `display` = 1 ) ORDER BY sort asc  [ RunTime:0.000246s ]
+SQL: SELECT `cname`,`cid` FROM `yy_category` WHERE ( `pid` = 0 ) AND ( `display` = 1 ) ORDER BY sort asc LIMIT 7   [ RunTime:0.000205s ]
+SQL: SHOW COLUMNS FROM `yy_goods` [ RunTime:0.000498s ]
+SQL: SHOW COLUMNS FROM `yy_category` [ RunTime:0.000445s ]
+SQL: SHOW COLUMNS FROM `yy_area` [ RunTime:0.000404s ]
+SQL: SHOW COLUMNS FROM `yy_shops` [ RunTime:0.000391s ]
+SQL: SELECT goods.cid AS cid,category.cid AS cid,category.cname AS cname FROM yy_goods goods INNER JOIN yy_category category ON goods.cid = category.cid INNER JOIN yy_area area ON goods.aid = area.aid INNER JOIN yy_shops shops ON goods.sid = shops.sid GROUP BY goods.cid ORDER BY goods.buy desc LIMIT 7   [ RunTime:0.000464s ]
+SQL: SELECT COUNT(*) AS tp_count FROM yy_goods goods INNER JOIN yy_category category ON goods.cid = category.cid INNER JOIN yy_area area ON goods.aid = area.aid INNER JOIN yy_shops shops ON goods.sid = shops.sid WHERE ( goods.price > '' ) LIMIT 1   [ RunTime:0.000316s ]
+SQL: SELECT goods.gid AS gid,goods.cid AS cid,goods.sid AS sid,goods.aid AS aid,goods.price AS price,goods.old_price AS old_price,goods.main_title AS main_title,goods.sub_title AS sub_title,goods.buy AS buy,goods.goods_img AS goods_img,category.cid AS cid,area.aid AS aid,shops.sid AS sid FROM yy_goods goods INNER JOIN yy_category category ON goods.cid = category.cid INNER JOIN yy_area area ON goods.aid = area.aid INNER JOIN yy_shops shops ON goods.sid = shops.sid WHERE ( goods.price > '' ) LIMIT 0,10   [ RunTime:0.000344s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 32 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 33 行.
+NOTIC: [8] Use of undefined constant Member - assumed 'Member' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 90 行.
+NOTIC: [8] Use of undefined constant Member - assumed 'Member' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 93 行.
+NOTIC: [8] Use of undefined constant Member - assumed 'Member' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 104 行.
+NOTIC: [8] Use of undefined constant Index - assumed 'Index' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 104 行.
+NOTIC: [8] Use of undefined constant Member - assumed 'Member' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 104 行.
+NOTIC: [8] Use of undefined constant Member - assumed 'Member' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 105 行.
+NOTIC: [8] Use of undefined constant sonCategory - assumed 'sonCategory' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 133 行.
+NOTIC: [8] Undefined variable: sonCategory /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 135 行.
+NOTIC: [8] Use of undefined constant sonArea - assumed 'sonArea' /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 146 行.
+NOTIC: [8] Undefined variable: sonArea /alidata/www/default/YYtuangou/APP/Runtime/Cache/Index/dff44c8e9ebea4949049842757e96f1a.php 第 147 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.016783s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016846s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000268s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000265s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000151s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000299s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001118s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000439s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000488s ]
+

@@ -1,0 +1,97 @@
+﻿    <include file="./Public/tpl/header.html" />
+	<!-- 载入公共头部文件-->
+	<link href="__PUBLIC__/Css/buy.css" type="text/css" rel="stylesheet" >
+	<div class='position'>
+		<form method="post" action="{:U(GROUP_NAME .'/Buy/payMent')}">
+		<input type="hidden" name="gid" value="{$goods.gid}">
+		<input type="hidden" name="price" value="{$goods.price}">
+		<div id="main">
+			<div class='step'>
+				<ul>
+					<li class='current'>1.查看订单 </li>
+					<li>2.选择支付方式 </li>
+					<li>3.购买成功 </li>
+				</ul>	
+			</div>
+			
+			<table class='buy-table' border=0>
+			<thead>
+				<tr>
+					<th>商品</th>
+					<th width='20%' style="text-align:left;">数量</th>
+					<th width='20%'>单价</th>
+					<th width='10%'>总价</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						<a href="{:U('Index/Detail/index')}/gid/{$goods.gid}" target="_blank">{$goods.main_title}</a>
+					</td>
+					<td class='goods-num'>
+						<a href="javascript:void(0);" class='reduce' id="reduce"></a>
+						<input id="goods_num" name="goods_num" type="text" value=1> 
+						<a href="javascript:void(0);" class='add' id="add"></a>
+					</td>
+					<td>{$goods.price}</td>
+					<td>{$goods.price}</td>
+				</tr>
+			</tbody>
+			</table>
+			<div class='address-list'>
+			<table>
+				<thead>
+					<tr>
+						<th>选择</th>
+						<th width="20%">收货人</th>
+						<th>地址/邮编</th>
+						<th width="20%">电话/手机</th>
+						<th width="20%">操作</th>
+					</tr>
+				</thead>
+				<tbody>
+					<foreach name="address" item="v">
+					<tr>
+						<td>
+							<input type="radio" checked=true name="addressid" value="{$v.addressid}">
+						</td>
+						<td>
+							{$v.username}
+						</td>
+						<td>
+						{$v.s_province}-{$v.s_city}-{$v.s_county}-{$v.street}
+						</td>
+						<td>
+							{$v.phone}
+						</td>
+						<td>
+							<a href="{:U('Member/Account/delAddress')}/addressid/{$v.addressid}">删除</a>
+						</td>
+					</tr>
+					</foreach>
+				</tbody>
+			</table>	
+			</div>
+			
+			<!-- 订单提交 -->
+			<div class='bottom'>
+				<input type="submit" class='submit' value="提交订单">
+			</div>
+		</div>
+		</form>
+	</div>
+	<script>
+		$('#reduce').click(function(){
+			var num = Number($('#goods_num').val());
+			if(num<=1){
+				return false;
+			}
+			$('#goods_num').val(num-1)
+		})
+		$('#add').click(function(){
+			var num = Number($('#goods_num').val());
+			$('#goods_num').val(num+1)
+		})
+	</script>
+</body>
+</html>

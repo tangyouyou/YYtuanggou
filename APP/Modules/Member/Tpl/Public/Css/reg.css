@@ -1,0 +1,140 @@
+@CHARSET "UTF-8";
+#regBox{
+	width:900px;
+	height:520px;
+	padding:20px 30px;
+	border:solid 1px #d4d4d4;
+	margin:30px auto;
+	background:#FFF;
+	box-shadow:0px 0px 3px #d4d4d4;
+}
+#regBox .header{
+	width:100%;
+	height:30px;
+	line-height:30px;
+	font-size:14px;
+	text-align:right;
+	border-bottom:1px solid #d9e8e8;
+}
+#regBox .header a{
+	color:#6ce0e3;
+}
+#regBox .form{
+	width:100%;
+	height:auto;
+	margin-top:15px;
+}
+#regBox .form dl{
+	width:100%;
+	height:30px;
+	padding:11px 0px;
+	margin-top:5px;
+}
+#regBox .form dl dt{
+	width:70px;
+	padding-right:10px;
+	height:30px;
+	float:left;
+	font-size:14px;
+	text-align:right;
+	line-height:30px;
+}
+#regBox .form dl dd{
+	float:left;
+	height:30px;
+	line-height:30px;
+}
+#regBox .form dl dd.text{
+	width:240px;
+	overflow:hidden;
+}
+#regBox .form dl .text input{
+	width:230px;
+	height:26px;
+	border:1px solid #cccccc;
+	font-size:14px;
+	text-indent:5px;
+	color:#000;
+}
+#regBox .form dl dd.prompt{
+	height:18px;
+	line-height:18px;
+	border:1px solid #a4dbfe;
+	font-size:14px;
+	padding:5px 5px 5px 30px;
+	display:none;
+	background-color:#e5f5ff;
+	background-image:url(../images/icons.png);
+	background-repeat:no-repeat;
+}
+#regBox .form dl dd.area{
+	width:180px;	
+	overflow:hidden;
+}
+#regBox .form dl .area select{
+	width:50px;
+}
+#regBox .form dl dd.code{
+	width:80px;
+}
+#regBox .form dl dd.code input{
+	width:70px;
+}
+#regBox .form dl .submit input{
+	cursor:pointer;
+	width:78px;
+	height:30px;
+	font-size:14px;
+	border-radius:2px;
+	border:0;
+	background-color: #29B4A8;
+    background-image: -moz-linear-gradient(center top , #25B0A4, #2EB8AC);
+	background-image: -webkit-linear-gradient(center top , #25B0A4, #2EB8AC);
+	background-image: -o-linear-gradient(center top , #25B0A4, #2EB8AC);
+    border-color: #23A79C;
+    box-shadow: 0 1px 0 #2AC2B5 inset;
+    color: white;
+}
+#regBox .form dl .submit input:hover{
+	background-image: -moz-linear-gradient(center top , #59bfbf, #3dbebe);
+	background-image: -weikit-linear-gradient(center top , #59bfbf, #3dbebe);
+	background-image: -o-linear-gradient(center top , #59bfbf, #3dbebe);
+}
+
+/** 样式切换  **/
+/** 获得焦点 **/
+#regBox .form dl.focus{
+	background:#fdf0e3;
+}
+#regBox .form .focus .text input{
+	border:1px solid #ffa960;
+	box-shadow:0px 0px 1px #999 inset;
+}
+#regBox .form .focus dd.prompt{
+	background-position:6px -93px;
+	display:block;
+}
+/** 验证失败 **/
+#regBox .form dl.error{
+	background:none;
+}
+#regBox .form .error .text input{
+	border:1px solid #ee4d3d;;
+	box-shadow:0px 0px 3px #ee4d3d inset;
+}
+#regBox .form .error dd.prompt{
+	background-position:6px -193px;
+	background-color:#ffcece;
+	border:1px solid #ff8080;
+	display:block;
+}
+/**  验证成功 **/
+#regBox .form dl.success{
+	background:none;
+}
+#regBox .form .success dd.prompt{
+	background-position:6px 6px;
+	background-color:#FFF;
+	border:0;
+	display:block;
+}

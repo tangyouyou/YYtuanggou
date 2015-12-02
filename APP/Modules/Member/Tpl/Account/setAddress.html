@@ -1,0 +1,113 @@
+﻿<include file="./Public/tpl/header.html" />
+	<!-- 载入公共头部文件-->
+<link href="__PUBLIC__/Css/userhome.css" type="text/css" rel="stylesheet" >
+<script type="text/javascript" src="__PUBLIC__/Js/userhome.js"></script>	
+<div id="main">
+	<div class='left'>
+		<ul class='userhome-nav'>
+			<li class='active'>
+				<a href="{:U('Member/Order/index')}">团购订单</a>
+			</li>
+			<li>
+				<a href="{:U('Member/Index/collect')}">我的收藏</a>
+			</li>
+			<li>
+				<a href="{:U('Member/Account/index')}">美团余额</a>
+			</li>
+			<li>
+				<a href="{:U('Member/Account/setting')}">账户设置</a>
+			</li>
+		</ul>
+		<div id="content">
+		<link href="__PUBLIC__/Css/account.css" type="text/css" rel="stylesheet" >
+		<div class='setting-nav'>
+			<a  href="{:U('Member/Account/setting')}">基本信息</a>
+			<a class='active'href="{:U('Member/Account/setAddress')}">收货地址</a>
+		</div>
+		<div class='address-list'>
+			<table>
+				<thead>
+					<tr>
+						<th width="20%">收货人</th>
+						<th>地址/邮编</th>
+						<th width="20%">电话/手机</th>
+						<th width="20%">操作</th>
+					</tr>
+				</thead>
+				<tbody>
+				    <foreach name="address" item="v">
+						<tr>
+							<td>
+								{$v.username}
+							</td>
+							<td>
+								{$v.province}-{$v.city}-{$v.county}-{$v.street}
+							</td>
+							<td>
+								{$v.phone}
+							</td>
+							<td>
+								<a href="{:U('Member/Account/delAddredss')}/addressid/{$v.addressid}">删除</a>
+							</td>
+						</tr>
+					</foreach>				
+				</tbody>
+			</table>	
+		</div>
+		<!-- 收货地址 -->
+		<div id="addressForm" class="address">
+		   <form action="{:U('Member/Account/addAddress')}" method="post">
+				<div class='address-base'>
+					<dl>
+						<dt>*省市区：</dt>
+						<dd style="width:400px;">
+							<select id="s_province" name="s_province"></select>
+							<select id="s_city" name="s_city" ></select>
+							<select id="s_county" name="s_county"></select>
+							<script type="text/javascript" src="__ROOT__/Public/Js/area.js"></script>
+							<script type="text/javascript">_init_area();</script>
+						</dd>
+					</dl>
+					<dl>
+						<dt>*街道地址：</dt>
+						<dd style="width:450px;">
+							<input name="street" type="text" value="">
+						</dd>
+					</dl>
+					<dl>
+						<dt>*邮政编码：</dt>
+						<dd>
+							<input name="zipcode" type="text" value="">
+						</dd>
+					</dl>
+					<dl>
+						<dt>*收货人姓名：</dt>
+						<dd>
+							<input name="username" type="text" value="">
+						</dd>
+					</dl>
+					<dl>
+						<dt>*电话号码：</dt>
+						<dd>
+							<input name="phone" type="text" value=""> 
+						</dd>
+					</dl>
+					<dl>
+						<dt></dt>
+						<dd>
+							<input type="submit" value="提交">
+						</dd>
+					</dl>
+				</div>
+			</form>
+		</div>	
+			</div>
+		</div>
+		<div class='user-status'>
+			<h6><span>Hi~</span>_qqcd71349674843</h6>
+			<p><span>等级：<span><i></i></p>
+			<p><span>积分：<span><strong>0</strong></p>
+		</div>
+	</div>
+</body>
+</html>

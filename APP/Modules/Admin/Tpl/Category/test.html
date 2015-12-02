@@ -1,0 +1,57 @@
+<form id="CategoryForm"action="{:U(GROUP_NAME . '/Category/runAddCate')}" method="post">
+		<table class="table table-striped table-hover table-bordered">
+			<tr>
+				<td width="20%">名称</td>
+				<td>值</td>
+			</tr>
+			<tr>
+				<td width="20%">分类列表</td>
+				<td>
+					<select name="pid" >						
+						<option value="0">所有分类</option>
+						<foreach name='cate' item='v'>
+							<option value="{$v.pid}">|{$v.html}{$v.cname}</option>
+						</foreach>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td width="20%">分类名称</td>
+				<td width="60%"> <input type="text" value="" name="user" class="input required" />     <p>分类名称需要大于16个字</p>          
+                </td> 
+			</tr>
+			<tr>
+				<td width="20%">分类标题</td>
+				<td><textarea name="title"></textarea></td>
+			</tr>
+			<tr>
+				<td width="20%">分类描述</td>
+				<td><textarea name="description"></textarea></td>
+			</tr>
+			<tr>
+				<td width="20%">分类关键字</td>
+				<td><textarea name="key_words"></textarea></td>
+			</tr>
+			<tr>
+				<td width="20%">排序</td>
+				<td><input type="text" name="sort"/></td>
+			</tr>
+			<tr>
+				<td width="20%">是否显示</td>
+				<td>
+					<lable>
+						<input type="radio" name="display" value="1"/>
+						<span>显示</span>
+					</lable>
+					<lable>
+						<input type="radio" name="display" value="0"/>
+						<span>隐藏</span>
+					</lable>
+				</td>
+			</tr>
+			<tr>
+				<td width="20%"></td>
+				<td ><input type="submit"  class="btn btn-primary"/></td>
+			</tr>
+		</table>
+   </form>

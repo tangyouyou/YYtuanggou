@@ -1,0 +1,100 @@
+@CHARSET "UTF-8";
+/*************************  收藏页样式    ********************************/
+#content .collect-nav{
+	width:100%;
+	height:20px;
+	padding:10px 0px;
+	border-bottom:1px solid #d4d4d4;
+}
+#content .collect-nav a{
+	display:inline-block;
+	padding:1px 3px;
+	font-size:12px;
+	margin:0px 5px;
+	border-radius:3px;
+	color:#11bbbb;
+}
+#content .collect-nav .active{
+	background:#11bbbb;
+	color:#fff;
+}
+#content .collect-list{
+	width:100%;
+	height:auto;
+	margin-top:10px;
+}
+
+#content .collect-list table{
+	width:658px;
+	border:1px solid #e5e5e5;
+	height:auto;
+	margin-top:30px;
+}
+#content .collect-list table thead{
+	width:100%;
+	height:33px;
+	border-bottom:1px solid #e5e5e5;
+	background:#f7f7f7;
+}
+#content .collect-list table thead th{
+	text-indent:10px;
+	font-size:14px;
+	text-align:center;
+}
+#content .collect-list table tbody{
+	width:100%;
+	height:auto;
+}
+#content .collect-list table tbody tr{
+	width:100%;
+	height:64px;
+	border-bottom:1px dashed #ddd; 
+}
+#content .collect-list table tbody tr .goods-show img{
+	float:left;
+	width:63px;
+	height:38px;
+	margin-left:12px;
+}
+#content .collect-list table tbody tr .goods-show a{
+	display:inline-block;
+	float:left;
+	margin-left:10px;
+	height:38px;
+	line-height:19px;
+	font-size:12px;
+	color:#333;
+	width:200px;
+	overflow:hidden;
+	text-align:left;
+}
+#content .collect-list table tbody tr td{
+	text-align:center;
+}
+#content .collect-list table tbody tr td a{
+	color:#11bbbb;
+}
+
+#content .collect-list table tbody tr td a.btn{
+	display:inline-block;
+	cursor:pointer;
+	width:32px;
+	height:18px;
+	font-size:12px;
+	border-radius:2px;
+	bcollect:0;
+	background-color: #29B4A8;
+    background-image: -moz-linear-gradient(center top , #25B0A4, #2EB8AC);
+	background-image: -webkit-linear-gradient(center top , #25B0A4, #2EB8AC);
+	background-image: -o-linear-gradient(center top , #25B0A4, #2EB8AC);
+    border-color: #23A79C;
+    box-shadow: 0 1px 0 #2AC2B5 inset;
+    color: white;
+	margin:0px 5px;
+}
+#content .collect-list table tbody tr td a.btn:hover{
+	background-image: -moz-linear-gradient(center top , #59bfbf, #3dbebe);
+	background-image: -weikit-linear-gradient(center top , #59bfbf, #3dbebe);
+	background-image: -o-linear-gradient(center top , #59bfbf, #3dbebe);
+}
+}

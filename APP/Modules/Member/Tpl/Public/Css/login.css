@@ -1,0 +1,129 @@
+@CHARSET "UTF-8";
+#login-box{
+	height:380px;
+	border:1px solid #d4d4d4;
+	margin:20px auto 50px auto;
+	width:838px;
+	padding:10px 60px;
+}
+#login-box h3{
+	width:100%;
+	height:55px;
+	border-bottom:1px solid #ddd;
+	line-height:55px;
+	font-size:24px;
+	text-indent:16px;
+	font-weight:400;
+	color:#333;
+}
+#login-box .left{
+	width:638px;
+	height:290px;
+	margin-top:20px;
+	border-right:1px solid #ddd;
+	float:left;
+}
+#login-box  .form dl{
+	width:100%;
+	height:30px;
+	padding:11px 0px;
+	margin-top:5px;
+}
+#login-box .form dl dt{
+	width:70px;
+	padding-right:10px;
+	height:30px;
+	float:left;
+	font-size:14px;
+	text-align:right;
+	line-height:30px;
+}
+#login-box .form dl dd{
+	float:left;
+	height:30px;
+	line-height:30px;
+}
+#login-box .form dl dd.text{
+	width:240px;
+	overflow:hidden;
+}
+#login-box .form dl .text input{
+	width:230px;
+	height:26px;
+	border:1px solid #cccccc;
+	font-size:14px;
+	text-indent:5px;
+	color:#000;
+}
+#login-box .form dl .submit input{
+	cursor:pointer;
+	width:78px;
+	height:30px;
+	font-size:14px;
+	border-radius:2px;
+	border:0;
+	background-color: #29B4A8;
+    background-image: -moz-linear-gradient(center top , #25B0A4, #2EB8AC);
+	background-image: -webkit-linear-gradient(center top , #25B0A4, #2EB8AC);
+	background-image: -o-linear-gradient(center top , #25B0A4, #2EB8AC);
+    border-color: #23A79C;
+    box-shadow: 0 1px 0 #2AC2B5 inset;
+    color: white;
+}
+#login-box .form dl .submit input:hover{
+	background-image: -moz-linear-gradient(center top , #59bfbf, #3dbebe);
+	background-image: -weikit-linear-gradient(center top , #59bfbf, #3dbebe);
+	background-image: -o-linear-gradient(center top , #59bfbf, #3dbebe);
+}
+
+#login-box  .right{
+	wdith:180px;
+	height:380px;
+	margin-top:20px;
+	float:left;
+	padding:10px;
+}
+#login-box  .right .right-title{
+	font-size:13px;
+	font-weight:300;
+	color:#333;
+}
+#login-box  .right .reg-link{
+	display:block;
+	cursor:pointer;
+	width:78px;
+	height:30px;
+	font-size:14px;
+	border-radius:2px;
+	line-height:30px;
+	text-align:center;
+	border:0;
+	background-color: #dddddd;
+    background-image: -moz-linear-gradient(center top , #eeeeee, #dddddd);
+	background-image: -webkit-linear-gradient(center top , #eeeeee, #dddddd);
+	background-image: -o-linear-gradient(center top , #eeeeee, #dddddd);
+    border-color: #dddddd;
+    box-shadow: 0 1px 0 #dddddd inset;
+    color:#666;
+	margin:10px 0px;
+}
+#login-box  .right .reg-link:hover{
+	text-decoration:none;
+	 background-image: -moz-linear-gradient(center top , #dddddd, #eeeeee);
+	background-image: -webkit-linear-gradient(center top , #dddddd, #eeeeee);
+	background-image: -o-linear-gradient(center top , #dddddd, #eeeeee);
+}
+#login-box  .right .open-title{
+	widt:100%;
+	height:32px;
+	line-height:32px;
+}
+#login-box  .right .open{
+	width:100%;
+	height:60px;
+}
+#login-box  .right .open .open-login-link img{
+	width:120px;
+	display:block;
+	margin-top:10px;
+}

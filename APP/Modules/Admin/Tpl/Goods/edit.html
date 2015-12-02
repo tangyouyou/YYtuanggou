@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title></title>
+<script type='text/javascript' src="__ROOT__/Public/jQuery/jquery-1.11.3.js"></script>
+<script	type="text/javascript" src="__ROOT__/Public/bootstrap/js/bootstrap.js"></script>
+<script type="text/javascript" src="__ROOT__/Public/Js/common.js"> </script>
+<link href="__ROOT__/Public/bootstrap/css/bootstrap.css" type="text/css" rel="stylesheet">
+<link href="__ROOT__/Public/Css/common.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src='__ROOT__/Data/Ueditor/ueditor.all.min.js'></script>
+<script type="text/javascript" src='__ROOT__/Data/Ueditor/ueditor.config.js'></script>
+   <script type="text/javascript">
+  <!--
+		window.UEDITOR_HOME_URL = '__ROOT__/Data/Ueditor';
+		window.onload = function(){
+			window.UEDITOR_CONFIG.imageUrl = "{:U(GROUP_NAME . '/Goods/upload')}";
+			window.UEDITOR_CONFIG.imagePath = '__ROOT__/Uploads/';
+			window.UEDITOR_CONFIG.initialFrameWidth = 750;
+			var editor = UE.getEditor('edit');
+		}
+
+
+  //-->
+  </script>
+</head>
+<style>
+	#map {
+		margin-top:20px;
+		margin-left: 20px;
+		height: 50px;
+		width:200px;
+
+	}
+	.title{
+		font-size: 28px;
+	}
+	#content{
+		margin-left: 50px;
+		margin-top: 10px;
+	    margin-right: 50px;
+	}
+	.check{
+        float: right;
+        margin-right: 570px;
+	}
+</style>
+
+<div id="map">
+	<span class='title'>编辑商品</span>
+</div>
+<div id="content">
+	 <form id="GoodsForm"action="{:U(GROUP_NAME . '/Goods/getData')}" method="post" enctype="multipart/form-data">
+		<table class="table table-striped table-hover table-bordered">
+			<tr>
+				<td width="20%">名称</td>
+				<td>值</td>
+			</tr>
+			<tr>
+				<td width="20%">商铺名称</td>
+				<td><input type="hidden" name="sid" value="{$shops.sid}"/>{$shops.shopname}</td>
+			</tr>	
+			<tr>
+				<td width="20%">分类列表</td>
+				<td>
+					 <select name="cid">
+					    <option value="{$cid.cid}">{$cid.cname}</option>
+					 	<foreach name="cate" item="v">
+					 	  <option value="{$v.cid}">{$v.html}{$v.cname}</option>
+					 	</foreach>
+					 </select>
+				</td>
+			</tr>
+			<tr>
+				<td width="20%">地区列表</td>
+				<td>
+					 <select name="aid">
+					    <option value="{$aid.aid}">{$aid.aname}</option>
+					 	<foreach name="area" item="v">
+					 	  <option value="{$v.aid}">{$v.html}{$v.aname}</option>
+					 	</foreach>
+					 </select>			
+				</td>
+			</tr>
+			<tr>
+				<td width="20%">商品标题</td>
+				<td><input type="text" name="main_title" value="{$goods.main_title}" /></td>
+			</tr>
+			<tr>
+				<td width="20%">商品副标题</td>
+				<td><input type="text" name="sub_title" value="{$goods.sub_title}"/></td>
+			</tr>
+			<tr>
+				<td width="20%">原价</td>
+				<td><input type="text" name="price" value="{$goods.price}"/></td>
+			</tr>
+			<tr>
+				<td width="20%">现价</td>
+				<td><input type="text" name="old_price" value="{$goods.old_price}"/></td>
+			</tr>
+			<tr>
+				<td width="20%">商品展示图</td>
+				<td>
+				    <input type="file" name="goods_img" style="margin-bottom:10px;" />
+				    <img src="{$goods.goods_img}" width="200">
+				    <input type="hidden" name="old_img" value="{$goods.goods_img}"/>
+				</td>
+			</tr>
+			<tr>
+				<td width="20%">商品服务</td>
+				<td>
+					<foreach name ="server" key="k" item="v">
+						<?php if(in_array($k,$goods['goods_server'])){?>
+						<label>
+							<input type="checkbox" checked=true name="goods_server[]" value="{$k}">
+							{$v.name}
+						</label>
+						<?php }else{?>
+						<label>
+							<input type="checkbox" name="goods_server[]" value="{$k}">
+							{$v.name}
+						</label>
+						<?php }?>
+					</foreach>
+				</td>
+			</tr>
+			<tr>
+				<td width="20%">细节展示</td>
+				<td><textarea name="detail" id='edit'></textarea></td>
+			</tr>
+			<tr>
+				<td width="20%"></td>
+				<td>
+				     <input type="submit" value="提交商品" class="btn btn-primary"/>
+				     <input type="hidden" name="gid" value="{$goods.gid}"/>
+				</td>
+			</tr>
+		</table>
+   </form>
+</div>
+<script type="text/javascript" src="__PUBLIC__/Js/jquery.validate.js"> </script>
+<script type="text/javascript" src="__PUBLIC__/Js/validate-ex.js"> </script>
+<script type="text/javascript">
+$(function() { 
+    var validate = $("#GoodsForm").validate({ 
+        rules: { 
+            main_title: { 
+                maxlength: 60, 
+                minlength: 2,             
+            }, 
+            sub_title: { 
+                maxlength: 60, 
+                minlength: 5 
+            }, 
+            price:{
+               digits:true
+            },
+            old_price:{
+                digits:true
+            }
+        },  
+        errorPlacement: function(error, element) { 
+            if (element.is(":radio")) error.appendTo(element.parent()); 
+            else if (element.is(":checkbox")) error.appendTo(element.parent()); 
+            else if (element.is("input[name=captcha]")) error.appendTo(element.parent()); 
+            else error.insertAfter(element); 
+        }, 
+        success: function(label) { 
+            label.html(" ").addClass("right"); 
+        } 
+      }); 
+  
+});
+</script>
+</body>
+</html>

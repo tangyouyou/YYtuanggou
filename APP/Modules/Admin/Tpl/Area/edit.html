@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title></title>
+<script type='text/javascript' src="__ROOT__/Public/jQuery/jquery.js"></script>
+<script	type="text/javascript" src="__ROOT__/Public/bootstrap/js/bootstrap.js"></script>
+<script type="text/javascript" src="__ROOT__/Public/Js/common.js"> </script>
+<link href="__ROOT__/Public/bootstrap/css/bootstrap.css" type="text/css" rel="stylesheet">
+<link href="__ROOT__/Public/Css/common.css" type="text/css" rel="stylesheet">
+</head>
+<style>
+	#map {
+		margin-top:20px;
+		margin-left: 20px;
+		height: 50px;
+		width:200px;
+
+	}
+	.title{
+		font-size: 28px;
+	}
+	#content{
+		margin-left: 50px;
+		margin-top: 10px;
+	    margin-right: 50px;
+	}
+	.check{
+        float: right;
+        margin-right: 570px;
+	}
+</style>
+
+<div id="map">
+	<span class='title'>添加地区</span>
+</div>
+<div id="content">
+	 <form id="AreaForm" action="{:U(GROUP_NAME . '/Area/edit')}" method="post">
+		<table class="table table-striped table-hover table-bordered">
+			<tr>
+				<td width="20%">名称</td>
+				<td>值</td>
+			</tr>
+			<tr>
+				<td width="20%">地区列表</td>
+				<td>
+					<select name="pid" >
+					        <option value="{$parent.aid}">{$parent.aname}</option>>					    
+					        <foreach name="area" item="v">
+					     	    <option value="{$v.aid}">|{$v.html}{$v.aname}</option>
+					     	</foreach>		
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td width="20%">地区名称</td>
+				<td width="60%"> <input type="text" name="aname"  value="{$check.aname}"/>        
+                </td> 
+			</tr>
+			<tr>
+				<td width="20%">排序</td>
+				<td><input type="text" name="sort" value="{$check.sort}"/></td>
+			</tr>
+			<tr>
+				<td width="20%">是否显示</td>
+				<td>
+					<if condition="$check.display eq 1">
+						<lable>
+							<input type="radio" name="display" value="1" checked="true"/>
+							<span>显示</span>
+						</lable>
+						<lable>
+							<input type="radio" name="display" value="0"/>
+							<span>隐藏</span>
+						</lable>
+					<else/>
+						<lable>
+							<input type="radio" name="display" value="1" />
+							<span>显示</span>
+						</lable>
+						<lable>
+							<input type="radio" name="display" value="0" checked="true"/>
+							<span>隐藏</span>
+						</lable>
+					</if>
+
+				</td>
+			</tr>
+			<tr>
+				<td width="20%"><input type="hidden" name="aid" value="{$check.aid}" /></td>
+				<td ><input type="submit"  class="btn btn-primary"/></td>
+			</tr>
+		</table>
+   </form>
+</div>
+<script type="text/javascript" src="__PUBLIC__/Js/jquery.validate.js"> </script>
+<script type="text/javascript" src="__PUBLIC__/Js/validate-ex.js"> </script>
+<script type="text/javascript">
+$(function() { 
+    var validate = $("#AreaForm").validate({ 
+        rules: { 
+            aname: { 
+                maxlength: 60, 
+                minlength: 2,             
+            }, 
+            sort:{
+              range: [1, 100]
+            },
+            display: "required", 
+        },  
+        errorPlacement: function(error, element) { 
+            if (element.is(":radio")) error.appendTo(element.parent()); 
+            else if (element.is(":checkbox")) error.appendTo(element.parent()); 
+            else if (element.is("input[name=captcha]")) error.appendTo(element.parent()); 
+            else error.insertAfter(element); 
+        }, 
+        success: function(label) { 
+            label.html(" ").addClass("right"); 
+        } 
+      }); 
+  
+});
+</script>
+</body>
+</html>

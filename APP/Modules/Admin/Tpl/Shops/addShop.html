@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title></title>
+<script type='text/javascript' src="__ROOT__/Public/jQuery/jquery-1.11.3.js"></script>
+<script	type="text/javascript" src="__ROOT__/Public/bootstrap/js/bootstrap.js"></script>
+<script type="text/javascript" src="__ROOT__/Public/Js/common.js"> </script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=PVshwY7ESTb7Rzz1Sdj7StV2"></script>
+<link href="__ROOT__/Public/bootstrap/css/bootstrap.css" type="text/css" rel="stylesheet">
+<link href="__ROOT__/Public/Css/common.css" type="text/css" rel="stylesheet">
+</head>
+<style>
+	#map {
+		margin-top:20px;
+		margin-left: 20px;
+		height: 50px;
+		width:200px;
+
+	}
+	.title{
+		font-size: 28px;
+	}
+	#content{
+		margin-left: 50px;
+		margin-top: 10px;
+	    margin-right: 50px;
+	}
+	.check{
+        float: right;
+        margin-right: 570px;
+	}
+</style>
+
+<div id="map">
+	<span class='title'>添加商铺</span>
+</div>
+<div id="content">
+	 <form id="ShopForm" action="{:U(GROUP_NAME . '/Shops/addShop')}" method="post">
+		<table class="table table-striped table-hover table-bordered">
+			<tr>
+				<td width="20%">名称</td>
+				<td>值</td>
+			</tr>
+			<tr>
+				<td width="20%">商铺名称</td>
+				<td width="60%"> <input type="text" name="shopname" />        
+                </td> 
+			</tr>
+			<tr>
+				<td width="20%">商铺地址</td>
+				<td><input type="text" name="shopaddress"/></td>
+			</tr>
+			<tr>
+				<td width="20%">地铁地址</td>
+				<td>
+	                <input type="text" name="metroaddress"/>
+				</td>
+			</tr>
+			<tr>
+				<td width="20%">商铺电话</td>
+				<td>
+	                <input type="text" name="shoptel"/>
+				</td>
+			</tr>
+			<tr>
+				<td width="20%">商铺坐标</td>
+				<td>
+	                <input type="text" id="shopcoord" name="shopcoord"/>
+	                <input type="button"  id="getPoint" value="获取坐标" class="btn btn-success"/>
+				</td>
+			</tr>
+			<tr>
+				<td width="20%"></td>
+				<td ><input type="submit"  class="btn btn-primary"/></td>
+			</tr>
+		</table>
+   </form>
+</div>
+<script type="text/javascript" src="__PUBLIC__/Js/jquery.validate.js"> </script>
+<script type="text/javascript" src="__PUBLIC__/Js/validate-ex.js"> </script>
+<script type="text/javascript">
+$(function() { 
+    var validate = $("#ShopForm").validate({ 
+        rules: { 
+            shopname: { 
+                maxlength: 60, 
+                minlength: 5,             
+            }, 
+            shopaddress: { 
+                maxlength: 60, 
+                minlength: 2,             
+            },
+            metroaddress: { 
+                maxlength: 60, 
+                minlength: 5,             
+            },
+            shoptel:{
+                isTel: true,
+            }           
+        },  
+        errorPlacement: function(error, element) { 
+            if (element.is(":radio")) error.appendTo(element.parent()); 
+            else if (element.is(":checkbox")) error.appendTo(element.parent()); 
+            else if (element.is("input[name=captcha]")) error.appendTo(element.parent()); 
+            else error.insertAfter(element); 
+        }, 
+        success: function(label) { 
+            label.html(" ").addClass("right"); 
+        },
+
+      });   
+        
+});
+
+</script>
+<script type="text/javascript">
+    $(function(){
+    	/*
+         点击获取坐标
+        */
+        $('#getPoint').click(function(){
+       	  if($('#shopcoord').val() == ''){
+       	  	 alert("请您输入一个地址")
+       	  }
+       	  var adds = $('#shopcoord').val();
+       	  getPoint(adds);
+        }) 
+    });
+    function getPoint(adds){
+	      var myGeo = new BMap.Geocoder();
+		// 将地址解析结果显示在地图上,并调整地图视野
+		myGeo.getPoint(adds, function(point){
+			$('#shopcoord').val(JSON.stringify(point));
+		}, "福州市");
+    }
+
+</script>
+</body>
+</html>

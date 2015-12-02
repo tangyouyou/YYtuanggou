@@ -1,0 +1,202 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title></title>
+<script type='text/javascript' src="__ROOT__/Public/jQuery/jquery-1.11.3.js"></script>
+<script	type="text/javascript" src="__ROOT__/Public/bootstrap/js/bootstrap.js"></script>
+<script type="text/javascript" src="__ROOT__/Public/Js/common.js"> </script>
+<link href="__ROOT__/Public/bootstrap/css/bootstrap.css" type="text/css" rel="stylesheet">
+<link href="__ROOT__/Public/Css/datetimepicker.css" type="text/css" rel="stylesheet">
+<link href="__PUBLIC__/datetimepicker/datetimepicker.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src='__ROOT__/Data/Ueditor/ueditor.all.min.js'></script>
+<script type="text/javascript" src='__ROOT__/Data/Ueditor/ueditor.config.js'></script>
+<script type="text/javascript" src='__PUBLIC__/datetimepicker/datetimepicker.js'></script>
+<script type="text/javascript" src='__PUBLIC__/Js/ajaxfileupload.js'></script>
+<script type="text/javascript">
+	window.UEDITOR_HOME_URL = '__ROOT__/Data/Ueditor';
+	window.onload = function(){
+		window.UEDITOR_CONFIG.imageUrl = "{:U(GROUP_NAME . '/Goods/upload')}";
+		window.UEDITOR_CONFIG.imagePath = '__ROOT__/Uploads/';
+		window.UEDITOR_CONFIG.initialFrameWidth = 750; 
+		UE.getEditor('edit');
+	}
+	var url ='http://localhost{:U(GROUP_NAME .'/Goods/checkImage')}';
+	
+	function upLoadImage(){
+	  $("#loading").ajaxStart(function(){
+	     $(this).show();
+	  }).ajaxComplete(function(){
+	     $(this).hide();
+	  })
+	}
+
+	$.ajaxFileUpload({
+	  url:url,
+	  type:'POST',
+	  secureurl:false,
+	  fileElementId:'goods_img',
+	  dataType:'json',
+	  success:function(result){
+	  	if(result.status === true){
+	  	    $(".image-wrap").show();
+	        $(".product-image").attr("src",result.image);
+	  	}else{
+	  		alert('上传图片失败');
+	  	}
+	   
+	  }
+    })
+</script>
+</head>
+<style>
+	#map {
+		margin-top:20px;
+		margin-left: 20px;
+		height: 50px;
+		width:200px;
+
+	}
+	.title{
+		font-size: 28px;
+	}
+	#content{
+		margin-left: 50px;
+		margin-top: 10px;
+	    margin-right: 50px;
+	}
+	.check{
+        float: right;
+        margin-right: 570px;
+	}
+</style>
+
+<div id="map">
+	<span class='title'>添加商品</span>
+</div>
+<div id="content">
+	 <form id="GoodsForm" action="{:U(GROUP_NAME . '/Goods/getData')}" method="post" enctype="multipart/form-data">
+		<table class="table table-striped table-hover table-bordered">
+			<tr>
+				<td width="20%">名称</td>
+				<td>值</td>
+			</tr>
+			<tr>
+				<td width="20%">商铺名称</td>
+				<td><input type="hidden" name="sid" value="{$shops.sid}"/>{$shops.shopname}</td>
+			</tr>	
+			<tr>
+				<td width="20%">分类列表</td>
+				<td>
+					 <select name="cid">
+					 	<foreach name="cate" item="v">
+					 	  <option value="{$v.cid}">{$v.html}{$v.cname}</option>
+					 	</foreach>
+					 </select>
+				</td>
+			</tr>
+			<tr>
+				<td width="20%">地区列表</td>
+				<td>
+					 <select name="aid">
+					 	<foreach name="area" item="v">
+					 	  <option value="{$v.aid}">{$v.html}{$v.aname}</option>
+					 	</foreach>
+					 </select>			
+				</td>
+			</tr>
+			<tr>
+				<td width="20%">商品标题</td>
+				<td><input type="text" name="main_title" /></td>
+			</tr>
+			<tr>
+				<td width="20%">商品副标题</td>
+				<td><input type="text" name="sub_title"/></td>
+			</tr>
+			<tr>
+				<td width="20%">原价</td>
+				<td><input type="text" name="price"/></td>
+			</tr>
+			<tr>
+				<td width="20%">现价</td>
+				<td><input type="text" name="old_price"/></td>
+			</tr>
+			<tr>
+				<td width="20%">商品图片</td>
+				<td>
+				    <input type="file" name="goods_img" id="goods_img" onclick="return upLoadImage();" />
+				    <img src="__PUBLIC__/Images/loader.gif" style="display:none;" id="loading"/>
+				    <div class="image-wrap">
+                        <img src="" class="product-image" style="display:none;"/>
+				    </div>
+				</td>
+			</tr>
+			<tr>
+				<td width="20%">开始时间</td>
+				<td><input id="datetimepicker" type="text" name="begin_time"/></td>
+			</tr>
+			<tr>
+				<td width="20%">下架时间</td>
+				<td><input id="datetimepicker1" type="text" name="end_time"/></td>
+			</tr>
+			<tr>
+				<td width="20%">商品服务</td>
+				<td>
+					<foreach name="goods_server" item="v" key="k">
+					   <label>
+                         <input type="checkbox" name="goods_server[]" value="{$k}">{$v.name}
+                       </label>
+					</foreach>
+				</td>
+			</tr>
+			<tr>
+				<td width="20%">细节展示</td>
+				<td><textarea name="detail" id='edit'></textarea></td>
+			</tr>
+			<tr>
+				<td width="20%"></td>
+				<td ><input type="submit" value="提交商品" class="btn btn-primary"/></td>
+			</tr>
+		</table>
+   </form>
+</div>
+<script type="text/javascript" src="__PUBLIC__/Js/jquery.validate.js"> </script>
+<script type="text/javascript" src="__PUBLIC__/Js/validate-ex.js"> </script>
+<script type="text/javascript">
+$(function() { 
+    var validate = $("#GoodsForm").validate({ 
+        rules: { 
+            main_title: { 
+                maxlength: 60, 
+                minlength: 2,             
+            }, 
+            sub_title: { 
+                maxlength: 200, 
+                minlength: 5 
+            }, 
+            price:{
+               digits:true
+            },
+            old_price:{
+                digits:true
+            }
+        },  
+        errorPlacement: function(error, element) { 
+            if (element.is(":radio")) error.appendTo(element.parent()); 
+            else if (element.is(":checkbox")) error.appendTo(element.parent()); 
+            else if (element.is("input[name=captcha]")) error.appendTo(element.parent()); 
+            else error.insertAfter(element); 
+        }, 
+        success: function(label) { 
+            label.html(" ").addClass("right"); 
+        } 
+      }); 
+  
+});
+</script>
+ <script>
+     $('#datetimepicker').datetimepicker({lang:'ch'});
+     $('#datetimepicker1').datetimepicker({lang:'ch'});
+</script>
+</body>
+</html>

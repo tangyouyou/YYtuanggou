@@ -1,0 +1,74 @@
+﻿<include file="./Public/tpl/header.html" />	
+<!-- 载入公共头部文件结束 -->
+<link href="__PUBLIC__/Css/userhome.css" type="text/css" rel="stylesheet" >
+<script type="text/javascript" src="__PUBLIC__/Css/Js/userhome.js"></script>	
+<div id="main">
+	<div class='left'>
+		<ul class='userhome-nav'>
+			<li>
+				<a href="{:U('Member/Order/index')}">团购订单</a>
+			</li>
+			<li class='active'>
+				<a href="{:U('Member/Index/collect')}">我的收藏</a>
+			</li>
+			<li>
+				<a href="{:U('Member/Account/index')}">美团余额</a>
+			</li>
+			<li>
+				<a href="{:U('Member/Account/setting')}">账户设置</a>
+			</li>
+		</ul>
+		<div id="content">
+		<link href="__PUBLIC__/Css/index.css" type="text/css" rel="stylesheet" >
+		<div class='collect-nav'>
+			<a href="{:U('Member/Index/collect')}" class='active'>全部</a>
+			<a href="{:U('Member/Index/collect')}/status/1">进行中的团购</a>
+			<a href="{:U('Member/Index/collect')}/status/2">已结束</a>
+		</div>
+		<div class='collect-list'>
+		    <if condition="$collect">
+			<table>
+				<thead>
+					<tr>
+						<th>团购商品</th>
+						<th width="10%">金额</th>
+						<th width="15%">状态</th>
+						<th width="15%">操作</th>
+					</tr>
+				</thead>
+				<tbody>
+				    <foreach name="collect" item="v">
+						<tr>
+							<td class='goods-show'>
+								<img src="{$v.goods_img}">
+								<a href="{:U('Index/Detail/index')}/gid/{$v.gid}">{$v.main_title}</a>
+							</td>
+							<td>
+								¥{$v.price}
+							</td>
+							<td>
+								{$v.end_time}
+							</td>
+							<td>
+								<a class='btn' href="{:U('Member/Buy/index')}/gid/{$v.gid}" target="_blank">购买</a><a href="{:U('Member/Index/delCollect')}/gid/{$v.gid}">删除</a>
+							</td>
+						</tr>
+				    </foreach>
+				</tbody>
+			</table>
+			<else/>
+			   没有收藏记录！！
+			</if>
+
+		</div>
+		
+			</div>
+		</div>
+		<div class='user-status'>
+			<h6><span>Hi~</span>_qqcd71349674843</h6>
+			<p><span>等级：<span><i></i></p>
+			<p><span>积分：<span><strong>0</strong></p>
+		</div>
+	</div>
+</body>
+</html>

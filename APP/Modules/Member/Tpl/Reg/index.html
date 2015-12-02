@@ -1,0 +1,51 @@
+﻿<include file="./Public/tpl/header.html" />
+	<script	type="text/javascript" src="__PUBLIC__/Js/regform.js"></script>
+<script>
+    function changeCode(){
+    	var src = '{:U(GROUP_NAME . '/Reg/showCode')}/'+Math.random();
+    	$(this).attr('src',src);
+    }
+	var __JSCONTROL__ =  'http://114.215.147.12{:U(GROUP_NAME . '/Reg/check')}';
+</script>
+	<!-- 载入公共头部文件-->
+	<link href="__PUBLIC__/Css/reg.css" type="text/css" rel="stylesheet" >
+	<div id="regBox">
+		<div class='header'>
+			已有本站账号?<a href="">登录</a>
+		</div>
+		<div class='form'>
+		<form action="{:U(GROUP_NAME .'/Reg/addUser')}" method="post" id="regForm">
+			<dl class='focus'>
+				<dt>邮箱</dt>
+				<dd class='text'><input class='must' type="text"  ajax=1 name="email" /></dd>
+				<dd class='prompt'>用于登录和找回密码，不会公开</dd>
+			</dl>
+			<dl>
+				<dt>用户名</dt>
+				<dd class='text'><input class='must' type="text" name="username" ajax=1 /></dd>
+				<dd class='prompt'></dd>
+			</dl>
+			<dl>
+				<dt>创建密码</dt>
+				<dd class='text'><input class='must' id="password" type="password" name="password" preg="/^\S{6,32}$/"/></dd>
+				<dd class='prompt'></dd>
+			</dl>
+			<dl>
+				<dt>确认密码</dt>
+				<dd class='text'><input class='must' type="password" name="password_d"/></dd>
+				<dd class='prompt'></dd>
+			</dl>
+			<dl>
+				<dt>验证码</dt>
+				<dd class='text code' style="width:200px;"><input ajax=1  style="float:left;" class='must' type="text"  name="code"/><img style="float:left;margin:0px 10px; width:80px;height:28px;"  onclick="changeCode.call(this);" src="{:U(GROUP_NAME . '/Reg/showCode')}"></dd>
+				<dd class='prompt'></dd>
+			</dl>
+			<dl>
+				<dt></dt>
+				<dd class='submit'><input type="submit" value="注册"></dd>
+			</dl>
+		</form>
+		</div>
+	</div>
+</body>
+</html>

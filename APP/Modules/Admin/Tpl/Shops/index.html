@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title></title>
+<script type='text/javascript' src="__ROOT__/Public/jQuery/jquery-1.11.3.js"></script>
+<script	type="text/javascript" src="__ROOT__/Public/bootstrap/js/bootstrap.js"></script>
+<script type="text/javascript" src="__ROOT__/Public/Js/common.js"> </script>
+<link href="__ROOT__/Public/bootstrap/css/bootstrap.css" type="text/css" rel="stylesheet">
+<link href="__ROOT__/Public/Css/common.css" type="text/css" rel="stylesheet">
+</head>
+<style>
+	#map {
+		margin-top:20px;
+		margin-left: 20px;
+		height: 50px;
+		width:200px;
+
+	}
+	.title{
+		font-size: 28px;
+	}
+	#content{
+		margin-left: 50px;
+		margin-top: 10px;
+	    margin-right: 50px;
+	}
+
+</style>
+
+<div id="map">
+	<span class='title'>商铺列表</span>
+</div>
+<div id="content">
+	<table id="table" class="table table-striped table-hover table-bordered">
+		<thead>
+			<tr>
+				<th width="5%"></th>
+				<th width="15%">商铺名称</th>
+				<th width="25%">商铺地址</th>
+				<th width="25%">地铁地址</th>
+				<th width="13%">商铺电话</th>
+				<th >操作</th>
+			</tr>
+		</thead>
+		<tbody>
+			<foreach name='list' item='v'>
+				<tr>
+					<td><a class='btn btn-mini btn-info unfold' style="font-size:16px;" href="">+</a></td>
+					<td>{$v.shopname}</td>
+					<td>{$v.shopaddress}</td>
+					<td>{$v.metroaddress}</td>
+					<td>{$v.shoptel}</td>
+					<td>
+						<a class='btn btn-mini btn-info' href="{:U(GROUP_NAME . '/Shops/edit')}/sid/{$v.sid}">编辑</a>
+						<a class='btn btn-mini btn-info delAffirm' href="{:U(GROUP_NAME . '/Shops/del')}/sid/{$v.sid}">删除</a>
+					</td>
+				</tr>
+			</foreach>
+		</tbody>
+	</table>
+	<div id="page">
+		{$page}
+	</div>
+</div>
+<script type="text/javascript">
+   $(function(){
+   	 $('.delAffirm').click(function(){
+   	 	if(!confirm('你确定要删除吗？')){
+   	 		return false;
+   	 	}
+   	 })
+
+   	 //分页按钮样式
+	$('#page a').addClass('btn btn-success');
+	$('#page strong').addClass('btn btn-info').css({marginRight:'5px'});
+   })
+</script>
+</body>
+</html>

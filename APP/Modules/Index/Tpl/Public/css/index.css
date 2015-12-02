@@ -1,0 +1,206 @@
+﻿/**
+ * 棣栭〉css鏂囦欢
+ */
+
+@CHARSET "UTF-8";
+/** 椤甸潰涓讳綋閮ㄥ垎 **/
+#main{
+	width:960px;
+	height:auto;
+	margin:0px auto;
+}
+/** 宸︿晶鍐呭鍖哄煙 **/
+#main .content{
+	width:716px;
+	*width:714px;
+	height:auto;
+	float:left;
+	overflow:hidden;
+}
+#main .content .item{
+	padding:15px;
+	background:#FFF;
+	border:1px solid #d4d4d4;
+	width:312px;
+	margin-right:14px;
+	_margin-right:13px;
+	height:333px;
+	position:relative;
+	float:left;
+	margin-bottom:14px;
+	box-shadow:0px 1px 3px #ddd;
+}
+#main .content .item .link{
+	color:#333;
+}
+#main .content .item .link:hover{
+	color:#00bbbb;
+	text-decoration:none;
+}
+#main .content .item .cover{
+	width:312px;
+	height:189px;
+}
+#main .content .item h3{
+	margin-top:13px;
+	line-height:24px;
+	font-size:16px;
+}
+#main .content .item .describe{
+	height:46px;
+	line-height:23px;
+	font-size:16px;
+}
+#main .content .item .detail{
+	width:100%;
+	height:36px;
+	padding-bottom:8px;
+}
+#main .content .item .detail a{
+	display:block;
+	width:83px;
+	height:35px;
+	float:right;
+	background:url(../images/sp-deal.png) no-repeat 0px 0px;
+}
+#main .content .item .detail a:hover{
+	background:url(../images/sp-deal.png) no-repeat 0px -35px;
+}
+#main .content .item .detail strong{
+	font-size:20px;
+	color:#ee5238;
+	line-height:40px;
+	font-family:arial;
+	margin-right:6px;
+}
+#main .content .item .detail span{
+	color:#949494;
+}
+#main .content .item .total{
+	font-size:12px;
+	text-align:right;
+	width:100%;
+	height:18px;
+	color:#949494;
+}
+#main .content .item .total strong{
+	color:#ee5238;
+}
+#main .content  .page{
+	width:100%;
+	height:30px;
+	margin:10px 0px;
+	text-align:center;
+}
+#main .content  .page a{
+	display:inline-block;
+	padding:5px 12px;
+	border:1px solid #e3e8e8;
+	color:#00bbc6;
+	background:#FFF;
+	margin:0px 5px;
+}
+#main .content  .page strong{
+	margin:0px 5px;
+	color:#FFF;
+	padding:5px 12px;
+	border:1px solid #00bbbb;
+	background:#00bbbb;
+}
+
+/** 鍙充晶渚ц竟鏍忛儴鍒� **/
+#main .sidebar{
+	width:240px;
+	float:right;
+	height:auto;
+	overflow:hidden;
+}
+#main .sidebar .hot-products{
+	width:208px;
+	height:590px;
+	border:1px solid #d4d4d4;
+	padding:0px 15px 0px 15px;
+	*padding:0px 15px 10px 15px;
+}
+#main .sidebar .hot-products h3{
+	width:100%;
+	height:24px;
+	line-height:24px;
+	font-size:16px;
+	margin-top:18px;
+}
+#main .sidebar .hot-products ul{
+	width:100%;
+	height:auto;
+	overflow:hidden;
+}
+#main .sidebar .hot-products ul li{
+	width:100%;
+	height:88px;
+	overflow:hidden;
+	margin-top:18px;
+}
+#main .sidebar .hot-products ul li h6{
+	width:100%;
+	height:25px;
+	position:relative;
+	font-weight:100;
+}
+#main .sidebar .hot-products ul li h6 span{
+	display:inline-block;
+	width:15px;
+	height:15px;
+	background:#2dbec4;
+	text-align:center;
+	line-height:15px;
+	color:#FFF;
+	position:absolute;
+	left:0px;
+	top:5px;
+	border-radius:3px;
+	
+}
+#main .sidebar .hot-products ul li h6 a{
+	text-overflow:ellipsis;
+	display:block;
+	width:188px;
+	height:25px;
+	overflow:hidden;
+	float:right;
+	color:#333;
+	font-size:12px;
+}
+#main .sidebar .hot-products ul li a{
+	display:block;
+	float:left;
+	width:91px;
+	height:55px;
+	margin-top:4px;
+}
+#main .sidebar .hot-products ul li a img{
+	width:100%;
+	height:100%;
+}
+#main .sidebar .hot-products ul li .info{
+	width:108px;
+	float:right;
+	height:46px;
+	padding-top:17px;
+}
+#main .sidebar .hot-products ul li .info em{
+	display:block;
+	width:100%;
+	height:24px;
+	line-height:24px;
+	color:#ee5238;
+}
+#main .sidebar .hot-products ul li .info p{
+	width:100%;
+	height:22px;
+	line-height:22px;
+	color:#999;
+}
+#main .sidebar .hot-products ul li .info p span{
+	color:#333333;
+}
+

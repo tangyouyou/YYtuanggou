@@ -1,0 +1,304 @@
+@CHARSET "UTF-8";
+/************************ 用户成长  ************************/
+#content .growth-nav{
+	width:100%;
+	height:20px;
+	padding:10px 0px;
+	border-bottom:1px solid #d4d4d4;
+	font-size:18px;
+	font-weight:bold;
+}
+#growth{
+	width:658px;
+	height:120px;
+	border:1px solid #f6e0af;
+	margin-top:15px;
+	background:#fffbf2;
+}
+#growth .growth-hd{
+	width:100%;
+	height:20px;
+	padding:10px 0px;
+}
+#growth .growth-hd p{
+	width:160px;
+	height:20px;
+	float:left;
+	line-height:20px;
+	margin-left:15px;
+}
+#growth .growth-hd p i{
+	display:inline-block;
+	width:40px;
+	height:15px;
+	background:url(../images/sp-growth-icons.png) no-repeat -20px 0px; 
+}
+#growth .growth-hd p strong{
+	color:#e95002;
+}
+#growth  .rate-bar{
+	width:636px;
+	height:60px;
+	margin:0px auto;
+}
+#growth  .rate-bar .growth-rate-bg{
+	width:634px;
+	height:12px;
+	border:1px solid #f7e4b9;
+	border-radius:3px;
+	display:block;
+	background:#FFF;
+	position:relative;
+}
+#growth  .rate-bar .growth-rate-bg span{
+	position:relative;
+	width:60%;
+	height:12px;
+	display:block;
+	left:0px;
+	top:0px;
+	background:#d8501b;
+}
+#growth  .rate-bar ul{
+	width:100%;
+	height:46px;
+	overflow:hidden;
+}
+#growth  .rate-bar ul li{
+	padding-top:8px;
+	height:38px;
+	width:108px;
+	float:left;
+	text-align:center;
+}
+
+#growth  .rate-bar ul li i{
+	display:inline-block;
+	width:16px;
+	height:16px;
+	background-image:url(../images/sp-growth-icons.png);
+	background-repeat:no-repeat;
+	background-position:0px 0px;
+}
+#growth  .rate-bar ul li span{
+	height:22px;
+	width:100%;
+	line-height:22px;
+	font-size:10px;
+	color:#666;
+}
+#growth  .rate-bar ul li.first{
+	width:45px;
+	text-align:left;
+}
+#growth  .rate-bar ul li.last{
+	width:45px;
+}
+/**************************** 账户设置  ***********************/
+#content .setting-nav{
+	width:100%;
+	height:20px;
+	padding:10px 0px;
+	border-bottom:1px solid #d4d4d4;
+}
+#content .setting-nav a{
+	display:inline-block;
+	padding:1px 3px;
+	font-size:12px;
+	margin:0px 5px;
+	border-radius:3px;
+	color:#11bbbb;
+}
+#content .setting-nav .active{
+	background:#11bbbb;
+	color:#fff;
+}
+#content .baseinfo{
+	width:100%;
+	height:auto;
+	padding:10px 0px;
+}
+#content .baseinfo dl{
+	width:100%;
+	height:24px;
+	margin-top:10px;
+	line-height:24px;
+}
+#content .baseinfo dl dt{
+	width:100px;
+	height:24px;
+	float:left;
+	text-align:right;
+}
+#content .baseinfo dl dd{
+	width:150px;
+	height:24px;
+	text-indent:12px;
+	float:left;
+}
+#content .baseinfo dl span{
+	display:block;
+	width:100px;
+	height:24px;
+	line-height:24px;
+	float:left;
+	overflow:hidden;
+}
+#content .baseinfo dl span a{
+	color:#11bbbb;
+}
+
+/****************** 收货地址  ************************/
+
+#content .address-list table{
+	width:658px;
+	border:1px solid #e5e5e5;
+	height:auto;
+	margin-top:30px;
+}
+#content .address-list table thead{
+	width:100%;
+	height:33px;
+	border-bottom:1px solid #e5e5e5;
+	background:#f7f7f7;
+}
+#content .address-list table thead th{
+	text-indent:10px;
+	font-size:14px;
+	text-align:center;
+}
+#content .address-list table tbody{
+	width:100%;
+	height:auto;
+}
+#content .address-list table tbody tr{
+	width:100%;
+	height:64px;
+	border-bottom:1px dashed #ddd; 
+}
+#content .address-list table tbody tr td{
+	text-align:center;
+}
+#content .address-list table tbody tr td a{
+	color:#11bbbb;
+}
+
+
+
+
+#main .address{
+	width:658px;
+	height:auto;
+	border:1px solid #e5e5e5;
+	margin-top:10px;
+}
+#main .address .address-base{
+	width:100%;
+	height:235px;
+}
+#main .address dl{
+	width:100%;
+	height:30px;
+	margin-top:10px;
+}
+#main .address dl dt{
+	width:100px;
+	height:30px;
+	text-align:right;
+	float:left;
+	line-height:30px;
+}
+#main .address dl dd{
+	width:150px;
+	height:30px;
+	float:left;
+	margin-left:5px;
+}
+#main .address dl dd input{
+	width:100%;
+	height:28px;
+	text-indent:5px;
+	border:1px solid #ccc;
+	border-radius:2px;
+}
+#main .address dl dd select{
+	width:120px;
+	float:left;
+	margin-top:5px;
+	margin-left:5px;
+}
+/*********** 账户余额 ***************/
+#content .balance{
+	width:100%;
+	height:30px;
+	line-height:30px;
+	font-size:16px;
+}
+#content .balance strong{
+	color:#ff8040;	
+	margin:0px 10px;
+}
+#content .balance  .top-up{
+	color:#11bbbb;
+}
+
+
+#content .balance-nav{
+	width:100%;
+	height:20px;
+	padding:10px 0px;
+	border-bottom:1px solid #d4d4d4;
+	font-size:18px;
+	font-weight:bold;
+}
+
+#content .balance-list table{
+	width:658px;
+	border:1px solid #e5e5e5;
+	height:auto;
+	margin-top:30px;
+}
+#content .balance-list table thead{
+	width:100%;
+	height:33px;
+	border-bottom:1px solid #e5e5e5;
+	background:#f7f7f7;
+}
+#content .balance-list table thead th{
+	text-indent:10px;
+	font-size:14px;
+	text-align:center;
+}
+#content .balance-list table tbody{
+	width:100%;
+	height:auto;
+}
+#content .balance-list table tbody tr{
+	width:100%;
+	height:64px;
+	border-bottom:1px dashed #ddd; 
+}
+#content .balance-list table tbody tr td{
+	text-align:center;
+}
+#content .balance-list table tbody tr td a{
+	color:#11bbbb;
+}
+#content .balance-list table tbody tr .goods-show img{
+	float:left;
+	width:63px;
+	height:38px;
+	margin-left:12px;
+}
+#content .balance-list table tbody tr .goods-show a{
+	display:inline-block;
+	float:left;
+	margin-left:10px;
+	height:38px;
+	line-height:19px;
+	font-size:12px;
+	color:#333;
+	width:200px;
+	overflow:hidden;
+	text-align:left;
+}

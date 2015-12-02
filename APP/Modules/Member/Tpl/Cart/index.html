@@ -1,0 +1,114 @@
+    <include file="./Public/tpl/header.html" />
+	<!-- 载入公共头部文件-->
+	<link href="__PUBLIC__/Css/cart.css" type="text/css" rel="stylesheet" >
+	<script type="text/javascript" src="__PUBLIC__/Js/cart.js"></script>	
+	<div id="main">
+		<div class='step'>
+			<div class='cart-title'>
+				<i></i>
+				<div>
+					<h3>
+						我的购物车
+					</h3>
+					<p>
+						<span class='cart-bar-bg'>
+							<span></span>
+						</span>
+						<b>{$count}/20</b>
+					</p>
+				</div>
+			</div>
+			<ul>
+				<li class='current'>1.查看购物车 </li>
+				<li>2.选择支付方式 </li>
+				<li>3.购买成功 </li>
+			</ul>	
+		</div>
+		<!-- 购物车列表 -->
+		<form method="post" action="{:U(GROUP_NAME .'/Buy/payMent')}">
+			<table class='cart-table' border=0>
+				<thead>
+					<tr>
+						<th width='35%'>商品</th>
+						<th width='15%'>状态</th>
+						<th width='15%'>类型/数量</th>
+						<th width='10%'>单价</th>
+						<th width='10%'>小计</th>
+						<th width='10%'>操作</th>
+					</tr>
+				</thead>
+				<tbody>
+				    <foreach name="cart" item="v">
+				        <input type="hidden" name="gid[]" value="{$v.gid}">
+			            <input type="hidden" name="price[]" value="{$v.price}">
+						<tr>
+							<td class='goods-show'>
+								<img src="{$v.goods_img}">
+								<a href="">{$v.main_title}</a>
+							</td>
+							<td>{$v.status}</td>
+							<td class='goods-num'>
+								<a href="javascript:void(0);" class='reduce' ></a>
+								<input class="goodsNum" name="goods_num[]" gid="{$v.gid}" url="{:U(GROUP_NAME .'/Cart/updataGoodsNum')}" type="text" value={$v.goods_num}> 
+								<a href="javascript:void(0);" class='add' ></a>
+							</td>
+							<td>{$v.price}</td>
+							<td>{$v.xiaoji}</td>
+							<td><a href="{:U(GROUP_NAME .'/Member/Cart/del')}/gid/{$v.gid}">删除</a></td>
+						</tr>
+					</foreach>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td colspan=3 class='total'>
+							应付总额： <strong>¥<span>{$total}</span></strong> 
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<div class='address-list'>
+			<table>
+				<thead>
+					<tr>
+						<th>选择</th>
+						<th width="20%">收货人</th>
+						<th>地址/邮编</th>
+						<th width="20%">电话/手机</th>
+						<th width="20%">操作</th>
+					</tr>
+				</thead>
+				<tbody>
+					<foreach name="address" item="v">
+					<tr>
+						<td>
+							<input type="radio" checked=true name="addressid" value="{$v.addressid}">
+						</td>
+						<td>
+							{$v.username}
+						</td>
+						<td>
+						{$v.s_province}-{$v.s_city}-{$v.s_county}-{$v.street}
+						</td>
+						<td>
+							{$v.phone}
+						</td>
+						<td>
+							<a href="{:U('Member/Account/delAddress')}/addressid/{$v.addressid}">删除</a>
+						</td>
+					</tr>
+					</foreach>
+				</tbody>
+			</table>	
+			</div>
+
+
+			<!-- 订单提交 -->
+			<div class='bottom'>
+				<input type="submit" class='submit' value="提交订单">
+			</div>
+		</form>
+	</div>
+</body>
+</html>

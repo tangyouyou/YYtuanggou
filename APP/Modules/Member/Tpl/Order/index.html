@@ -1,0 +1,81 @@
+﻿  <include file="./Public/tpl/header.html" />
+	<!-- 载入公共头部文件-->
+<link href="__PUBLIC__/Css/userhome.css" type="text/css" rel="stylesheet" >
+<script type="text/javascript" src="__PUBLIC__/Js/userhome.js"></script>	
+<div id="main">
+	<div class='left'>
+		<ul class='userhome-nav'>
+			<li class='active'>
+				<a href="{:U('Member/Order/index')}">团购订单</a>
+			</li>
+			<li>
+				<a href="{:U('Member/Index/collect')}">我的收藏</a>
+			</li>
+			<li>
+				<a href="{:U('Member/Account/index')}">美团余额</a>
+			</li>
+			<li>
+				<a href="{:U('Member/Account/setting')}">账户设置</a>
+			</li>
+		</ul>
+		<div id="content">
+		<link href="__PUBLIC__/Css/order.css" type="text/css" rel="stylesheet" >
+		<div class='order-nav'>
+			<a href="{:U('Member/Order/index')}" class='active'>全部</a>
+			<a href="{:U('Member/Order/index')}/status/1">未付款</a>
+			<a href="{:U('Member/Order/index')}/status/2">已付款</a>
+		</div>
+		<div class='order-list'>
+		    <if condition="$order">
+			<table>
+				<thead>
+					<tr>
+						<th width="50%">团购项目</th>
+						<th width="10%">数量</th>
+						<th width="10%">金额</th>
+						<th width="15%">订单状态</th>
+						<th width="15%">操作</th>
+					</tr>
+				</thead>
+				<tbody>
+				    <foreach name="order" item="v">
+						<tr>
+							<td class='goods-show'>
+								<img src="{$v.goods_img}">
+								<a href="{:U('Index/Detail/index')}/gid/{$v.gid}">{$v.main_title}</a>
+							</td>
+							<td>
+								{$v.goods_num}
+							</td>
+							<td>
+								{$v.zongji}
+							</td>
+							<td>
+								<span>{$v.status}</span><br/>
+								<a href="{:U('Index/Detail/index')}/gid/{$v.gid}" >订单详情</a>
+							</td>
+							<td>
+							    <if condition="$v['status'] eq '未付款'">
+								<a class='btn' href="{:U(GROUP_NAME .'/Buy/payMent')}/oid/{$v.orderid}">付款</a><br/>
+								</if>
+								<a href="{:U(GROUP_NAME .'/Order/del')}/oid/{$v.orderid}">删除订单</a>
+							</td>
+						</tr>
+					</foreach>					
+				</tbody>
+			</table>
+			<else/>
+			   没有订单信息
+			</if>	
+		</div>
+		
+			</div>
+		</div>
+		<div class='user-status'>
+			<h6><span>Hi~</span>_qqcd71349674843</h6>
+			<p><span>等级：<span><i></i></p>
+			<p><span>积分：<span><strong>0</strong></p>
+		</div>
+	</div>
+</body>
+</html>

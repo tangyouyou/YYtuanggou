@@ -1,0 +1,51 @@
+<include file="./Public/tpl/header.html" />
+	<!-- 载入公共头部文件-->
+	<link href="__PUBLIC__/Css/login.css" type="text/css" rel="stylesheet" >
+	<!-- 页面主体开始 -->
+	<div id="login-box">
+		<h3>会员登录</h3>
+		<div class='left'>
+		  <form action="{:U(GROUP_NAME . '/Login/login')}" method="post">
+				<div class='form'>
+					<dl>
+						<dt>账号:</dt>
+						<dd class='text'>
+							<input name="username" type="text"/>
+						</dd>
+					</dl>
+					<dl>
+						<dt>密码:</dt>
+						<dd class='text'>
+							<input name="password" type="password"/>
+						</dd>
+						<dd><a style="color:#11bbbb;" href="">忘记密码</a></dd>
+					</dl>
+					<dl>
+						<dt></dt>
+						<dd>				
+							<label>
+								<input type="checkbox" name="auto_login" /> 下次自动登录
+							</label>
+						</dd>
+					</dl>
+					<dl>
+						<dt></dt>
+						<dd class='submit'>
+							<input type="submit" value="登录">
+						</dd>
+					</dl>
+				</div>
+			</form>
+		</div>
+		<div class='right'>
+			<p class='right-title'>尚未注册？</p>
+			<a class='reg-link' href="{:U('Member/Reg/index')}">免费注册</a>
+			<p class='open-title'>用合作网站账号登录</p>
+			<div class='open'>
+				<a class='open-login-link sina' href=""><img src="http://study.houdunwang.com/hdlearn/config/img/weibo_login.png"></a>
+				<a class='open-login-link qq' href=""><img src="http://study.houdunwang.com/hdlearn/config/img/qq_login.png"></a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

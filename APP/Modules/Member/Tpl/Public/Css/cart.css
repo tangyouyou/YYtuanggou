@@ -1,0 +1,232 @@
+@CHARSET "UTF-8";
+#main{
+	width:918px;
+	height:auto;
+	padding:20px;
+	border:1px solid #d4d4d4;
+	margin:10px auto;
+}
+
+#main .step{
+	width:100%;
+	height:50px;
+	overflow:hidden;
+}
+#main .step .cart-title{
+	width:220px;
+	height:50px;
+	float:left;
+}
+#main .step .cart-title i{
+	display:block;
+	width:60px;
+	height:46px;
+	float:left;
+	background:url(../images/sp-cart-icon.png) no-repeat 0px 0px;
+}
+#main .step .cart-title div{
+	width:130px;
+	float:left;
+	margin-left:12px;
+	height:50px;
+}
+#main .step .cart-title div h3{
+	width:100%;
+	height:36px;
+	line-height:36px;
+	font-size:24px;
+	color:#333;
+}
+#main .step .cart-title div p{
+	width:100%;
+	height:20px;
+	font-size:12px;
+}
+#main .step .cart-title div p .cart-bar-bg{
+	display:inline-block;
+	width:90px;
+	height:5px;
+	border:1px solid #efefef;
+	position:relative;
+	overflow:hidden;
+}
+#main .step .cart-title div p .cart-bar-bg span{
+	position:absolute;
+	left:0px;
+	top:0px;
+	display:block;
+	width:90px;
+	height:5px;
+	background:#ff9e5f;
+}
+#main .step ul{
+	width:690px;
+	height:30px;
+	float:right;
+	margin-top:10px;
+	overflow:hidden;
+}
+#main .step ul li{
+	width:220px;
+	height:30px;
+	float:left;
+	background:#ececec;
+	border-radius:5px;
+	text-align:center;
+	color:#666;
+	margin-right:10px;
+	line-height:30px;
+	font-size:13px;
+	font-family:'宋体';
+}
+#main .step ul li.current{
+	background:#ff9e5e;
+	color:#FFF;
+}
+
+/**
+ * 购物车列表
+ */
+#main .cart-table{
+	width:916px;
+	border:1px solid #e5e5e5;
+	height:auto;
+	margin-top:30px;
+}
+#main .cart-table thead{
+	width:100%;
+	height:33px;
+	border-bottom:1px solid #e5e5e5;
+	background:#f7f7f7;
+	text-align:left;
+}
+#main .cart-table thead th{
+	text-indent:10px;
+	font-size:14px;
+}
+#main .cart-table tbody{
+	width:100%;
+	height:auto;
+}
+#main .cart-table tbody tr{
+	width:100%;
+	height:64px;
+	border-bottom:1px dashed #ddd; 
+}
+#main .cart-table tbody tr .goods-show img{
+	float:left;
+	width:63px;
+	height:38px;
+	margin-left:12px;
+}
+#main .cart-table tbody tr .goods-show a{
+	display:inline-block;
+	float:left;
+	margin-left:10px;
+	height:38px;
+	line-height:19px;
+	font-size:12px;
+	color:#333;
+	width:200px;
+	overflow:hidden;
+}
+#main .cart-table tbody tr .goods-num a{
+	display:inline-block;
+	width:14px;
+	height:13px;
+	float:left;
+	margin-top:8px;
+}
+#main .cart-table tbody tr .goods-num a.reduce{
+	background:url(../images/sp-icon.png) no-repeat -12px -60px;
+	margin-right:5px;	
+}
+#main .cart-table tbody tr .goods-num a.add{
+	background:url(../images/sp-icon.png) no-repeat -51px -60px;
+	margin-left:5px;	
+}
+#main .cart-table tbody tr .goods-num a.reduce:hover{
+	background:url(../images/sp-icon.png) no-repeat -25px -60px;
+}
+#main .cart-table tbody tr .goods-num a.add:hover{
+	background:url(../images/sp-icon.png) no-repeat -64px -60px;
+}
+#main .cart-table tbody tr .goods-num input{
+	width:50px;
+	height:30px;
+	border:1px solid #999;
+	float:left;
+	text-align:center;
+}
+#main .cart-table tbody tr .total{
+	font-size:14px;
+}
+#main .cart-table tbody tr .total strong{
+	color:#ea4f01;
+	font-size:24px;
+}
+
+/****************** 收货地址  ************************/
+
+#main .address-list table{
+	width:100%;
+	border:1px solid #e5e5e5;
+	height:auto;
+	margin-top:30px;
+}
+#main .address-list table thead{
+	width:100%;
+	height:33px;
+	border-bottom:1px solid #e5e5e5;
+	background:#f7f7f7;
+}
+#main .address-list table thead th{
+	text-indent:10px;
+	font-size:14px;
+	text-align:center;
+}
+#main .address-list table tbody{
+	width:100%;
+	height:auto;
+}
+#main .address-list table tbody tr{
+	width:100%;
+	height:64px;
+	border-bottom:1px dashed #ddd; 
+}
+#main .address-list table tbody tr td{
+	text-align:center;
+}
+#main .address-list table tbody tr td a{
+	color:#11bbbb;
+}
+
+#main  .bottom{
+	width:100%;
+	height:50px;
+	overflow:hidden;
+}
+#main  .bottom .submit{
+	cursor:pointer;
+	width:98px;
+	height:38px;
+	font-size:14px;
+	border-radius:2px;
+	border:0;
+	background-color: #29B4A8;
+    background-image: -moz-linear-gradient(center top , #25B0A4, #2EB8AC);
+	background-image: -webkit-linear-gradient(center top , #25B0A4, #2EB8AC);
+	background-image: -o-linear-gradient(center top , #25B0A4, #2EB8AC);
+    border-color: #23A79C;
+    box-shadow: 0 1px 0 #2AC2B5 inset;
+    color: white;
+	float:right;
+	margin-top:10px;
+}
+#main  .bottom .submit:hover{
+	background-image: -moz-linear-gradient(center top , #59bfbf, #3dbebe);
+	background-image: -weikit-linear-gradient(center top , #59bfbf, #3dbebe);
+	background-image: -o-linear-gradient(center top , #59bfbf, #3dbebe);
+}
+
+

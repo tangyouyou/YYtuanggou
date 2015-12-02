@@ -1,0 +1,233 @@
+@CHARSET "UTF-8";
+.position{
+	width:960px;
+	height:3000px;
+	margin:10px auto;
+}
+#main{
+	width:700px;
+	height:auto;
+	padding:20px;
+	border:1px solid #d4d4d4;
+	float:left;
+}
+#main .step{
+	width:100%;
+	height:50px;
+	overflow:hidden;
+}
+#main .step ul{
+	width:690px;
+	height:30px;
+	float:right;
+	margin-top:10px;
+}
+#main .step ul li{
+	width:220px;
+	height:30px;
+	float:left;
+	background:#ececec;
+	border-radius:5px;
+	text-align:center;
+	color:#666;
+	margin-right:10px;
+	line-height:30px;
+	font-size:13px;
+	font-family:'宋体';
+}
+#main .step ul li.current{
+	background:#ff9e5e;
+	color:#FFF;
+}
+
+#main .buy-table{
+	width:700px;
+	border:1px solid #e5e5e5;
+	height:auto;
+	margin-top:30px;
+}
+#main .buy-table thead{
+	width:100%;
+	height:33px;
+	border-bottom:1px solid #e5e5e5;
+	background:#f7f7f7;
+	text-align:left;
+}
+#main .buy-table thead th{
+	text-indent:10px;
+	font-size:14px;
+	text-align:center;
+}
+#main .buy-table tbody{
+	width:100%;
+	height:auto;
+}
+#main .buy-table tbody tr{
+	width:100%;
+	height:64px;
+	border-bottom:1px dashed #ddd; 
+}
+
+#main .buy-table tbody tr td{
+	text-align:center;
+}
+#main .buy-table tbody tr .goods-show img{
+	float:left;
+	width:63px;
+	height:38px;
+	margin-left:12px;
+}
+#main .buy-table tbody tr .goods-show a{
+	display:inline-block;
+	float:left;
+	margin-left:10px;
+	height:38px;
+	line-height:19px;
+	font-size:12px;
+	color:#333;
+	width:200px;
+	overflow:hidden;
+}
+
+#main .buy-table tbody tr .goods-num a{
+	display:inline-block;
+	width:14px;
+	height:13px;
+	float:left;
+	margin-top:8px;
+}
+#main .buy-table tbody tr .goods-num a.reduce{
+	background:url(../images/sp-icon.png) no-repeat -12px -60px;
+	margin-right:5px;	
+}
+#main .buy-table tbody tr .goods-num a.add{
+	background:url(../images/sp-icon.png) no-repeat -51px -60px;
+	margin-left:5px;	
+}
+#main .buy-table tbody tr .goods-num a.reduce:hover{
+	background:url(../images/sp-icon.png) no-repeat -25px -60px;
+}
+#main .buy-table tbody tr .goods-num a.add:hover{
+	background:url(../images/sp-icon.png) no-repeat -64px -60px;
+}
+#main .buy-table tbody tr .goods-num input{
+	width:50px;
+	height:30px;
+	border:1px solid #999;
+	float:left;
+	text-align:center;
+}
+#main .buy-table tbody tr .total{
+	font-size:14px;
+}
+#main .buy-table tbody tr .total strong{
+	color:#ea4f01;
+	font-size:24px;
+}
+#main  .bottom{
+	width:100%;
+	height:50px;
+	overflow:hidden;
+}
+#main  .bottom .submit{
+	cursor:pointer;
+	width:98px;
+	height:38px;
+	font-size:14px;
+	border-radius:2px;
+	border:0;
+	background-color: #29B4A8;
+    background-image: -moz-linear-gradient(center top , #25B0A4, #2EB8AC);
+	background-image: -webkit-linear-gradient(center top , #25B0A4, #2EB8AC);
+	background-image: -o-linear-gradient(center top , #25B0A4, #2EB8AC);
+    border-color: #23A79C;
+    box-shadow: 0 1px 0 #2AC2B5 inset;
+    color: white;
+	float:right;
+	margin-top:10px;
+}
+#main  .bottom .submit:hover{
+	background-image: -moz-linear-gradient(center top , #59bfbf, #3dbebe);
+	background-image: -weikit-linear-gradient(center top , #59bfbf, #3dbebe);
+	background-image: -o-linear-gradient(center top , #59bfbf, #3dbebe);
+}
+/******************** 订单付款页  *****************************/
+#main .buy-detail{
+	width:100%;
+	height:auto;
+	margin-top:20px;
+}
+#main .buy-detail li{
+	width:100%;
+	height:48px;
+	border-bottom:1px dotted #d4d4d4;
+}
+#main .buy-detail li p{
+	width:100%;
+	height:24px;
+	line-height:24px;
+	font-size:12px;
+}
+#main .buy-detail li p span{
+	margin-right:10px;
+}
+#main .total{
+	width:100%;
+	height:auto;
+}
+#main .total p{
+	width:100%;
+	height:24px;
+	line-height:24px;
+}
+#main .total p strong{
+	color:#ff8040;
+}
+#main .buysuccess{
+	font-size:24px;
+	width:100%;
+	height:50px;
+	line-height:50px;
+	text-indent:16px;
+	margin-top:20px;
+	color:#333;
+}
+#main .buysuccess a{
+	font-size:12px;
+	margin:0px 30px;
+	color:#11bbbb;
+}
+/****************** 收货地址  ************************/
+
+#main .address-list table{
+	width:100%;
+	border:1px solid #e5e5e5;
+	height:auto;
+	margin-top:30px;
+}
+#main .address-list table thead{
+	width:100%;
+	height:33px;
+	border-bottom:1px solid #e5e5e5;
+	background:#f7f7f7;
+}
+#main .address-list table thead th{
+	text-indent:10px;
+	font-size:14px;
+	text-align:center;
+}
+#main .address-list table tbody{
+	width:100%;
+	height:auto;
+}
+#main .address-list table tbody tr{
+	width:100%;
+	height:64px;
+	border-bottom:1px dashed #ddd; 
+}
+#main .address-list table tbody tr td{
+	text-align:center;
+}
+#main .address-list table tbody tr td a{
+	color:#11bbbb;
+}
